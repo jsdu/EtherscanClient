@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => 'LICENSE' }
   spec.author       = { "Jason Du" => "contact@dujason.ca" }
   spec.source       = { :git => "https://github.com/jsdu/EtherscanClient.git", :tag => "#{spec.version}" }
-  spec.source_files = "EtherscanClient/**/*.{swift}"
+  spec.source_files = "Client/**/*.{swift}"
   spec.swift_version = "5.0"
   spec.platforms = {
     "ios": "12.0"
