@@ -15,6 +15,7 @@ public class EtherscanClient {
     public let transaction: TransactionStatus
     public let token: Token
     public let gas: GasTracker
+    public let contract: Contract
 
     // Shared URL Session
     let session = URLSession(configuration: .default)
@@ -24,5 +25,6 @@ public class EtherscanClient {
         transaction = TransactionStatus(apiKey: apiKey, session: session)
         token = Token(apiKey: apiKey, session: session)
         gas = GasTracker(apiKey: apiKey, session: session)
+        contract = Contract(apiKey: apiKey, session: session)
     }
 }

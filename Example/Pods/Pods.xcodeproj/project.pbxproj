@@ -30,6 +30,8 @@
 		F0F46A0E23D801AB00F3FDDE /* TransactionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469FE23D801AB00F3FDDE /* TransactionStatus.swift */; };
 		F0F46A0F23D801AB00F3FDDE /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469FF23D801AB00F3FDDE /* ApiClient.swift */; };
 		F0F46A1023D801AB00F3FDDE /* EtherscanClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A0023D801AB00F3FDDE /* EtherscanClient.swift */; };
+		F0F46A1723D89DA100F3FDDE /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A1623D89DA100F3FDDE /* Contract.swift */; };
+		F0F46A1923D8A19D00F3FDDE /* SourceCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A1823D8A19D00F3FDDE /* SourceCodeModel.swift */; };
 		F7C8BA13AB5A221153ED0F6AD69E09CC /* Pods-EtherscanClient_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D21320902B1CE633FD177E786DB4267 /* Pods-EtherscanClient_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F876DD665763484A468D49AF0F40C7F6 /* Pods-EtherscanClient_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6106CF2E8CCEA9010B1082D4888191 /* Pods-EtherscanClient_Tests-dummy.m */; };
 /* End PBXBuildFile section */
@@ -96,6 +98,8 @@
 		F0F469FE23D801AB00F3FDDE /* TransactionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionStatus.swift; sourceTree = "<group>"; };
 		F0F469FF23D801AB00F3FDDE /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		F0F46A0023D801AB00F3FDDE /* EtherscanClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtherscanClient.swift; sourceTree = "<group>"; };
+		F0F46A1623D89DA100F3FDDE /* Contract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
+		F0F46A1823D8A19D00F3FDDE /* SourceCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceCodeModel.swift; sourceTree = "<group>"; };
 		F2D7D72A5FE74A48F277C81047438CEF /* Pods-EtherscanClient_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EtherscanClient_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FD7819936836E083BE2EB3E8E4DB418E /* Pods-EtherscanClient_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EtherscanClient_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FE144E241FF24FF0146419547717FDBF /* Pods-EtherscanClient_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EtherscanClient_Example.modulemap"; sourceTree = "<group>"; };
@@ -266,10 +270,11 @@
 		F0F469EB23D801AB00F3FDDE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F0F469EC23D801AB00F3FDDE /* Transaction */,
-				F0F469EE23D801AB00F3FDDE /* Gas */,
 				F0F469F023D801AB00F3FDDE /* ESResult.swift */,
 				F0F469F123D801AB00F3FDDE /* Utility.swift */,
+				F0F469EC23D801AB00F3FDDE /* Transaction */,
+				F0F469EE23D801AB00F3FDDE /* Gas */,
+				F0F46A1A23D8A20400F3FDDE /* Contract */,
 				F0F469F223D801AB00F3FDDE /* Account */,
 			);
 			path = Model;
@@ -318,8 +323,17 @@
 				F0F469FC23D801AB00F3FDDE /* Account.swift */,
 				F0F469FD23D801AB00F3FDDE /* Token.swift */,
 				F0F469FE23D801AB00F3FDDE /* TransactionStatus.swift */,
+				F0F46A1623D89DA100F3FDDE /* Contract.swift */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		F0F46A1A23D8A20400F3FDDE /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				F0F46A1823D8A19D00F3FDDE /* SourceCodeModel.swift */,
+			);
+			path = Contract;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,12 +494,14 @@
 				D6C5C0958680AA789E3E070AC147110E /* EtherscanClient-dummy.m in Sources */,
 				F0F46A0923D801AB00F3FDDE /* Transaction.swift in Sources */,
 				F0F46A0A23D801AB00F3FDDE /* Query.swift in Sources */,
+				F0F46A1923D8A19D00F3FDDE /* SourceCodeModel.swift in Sources */,
 				F0F46A0B23D801AB00F3FDDE /* GasTracker.swift in Sources */,
 				F0F46A0823D801AB00F3FDDE /* Balance.swift in Sources */,
 				F0F46A0223D801AB00F3FDDE /* GasOracle.swift in Sources */,
 				F0F46A0E23D801AB00F3FDDE /* TransactionStatus.swift in Sources */,
 				F0F46A1023D801AB00F3FDDE /* EtherscanClient.swift in Sources */,
 				F0F46A0123D801AB00F3FDDE /* Status.swift in Sources */,
+				F0F46A1723D89DA100F3FDDE /* Contract.swift in Sources */,
 				F0F46A0523D801AB00F3FDDE /* Erc20Transfer.swift in Sources */,
 				F0F46A0723D801AB00F3FDDE /* InternalTransaction.swift in Sources */,
 			);

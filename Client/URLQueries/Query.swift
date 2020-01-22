@@ -13,6 +13,7 @@ enum Module: String {
     case transaction
     case stats
     case gastracker
+    case contract
 }
 
 enum Action: String {
@@ -36,6 +37,10 @@ enum Action: String {
     // Gas
     case gasestimate
     case gasoracle
+
+    // Contract
+    case getabi
+    case getsourcecode
 }
 
 enum Query: String {

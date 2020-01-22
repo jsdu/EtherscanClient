@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "EtherscanClient"
-  spec.version      = "1.0.0"
+  spec.version      = "0.0.1"
   spec.summary      = "Etherscan Api Client"
   spec.description  = <<-DESC
     EtherscanClient is a clean and well written client for the Etherscan API.

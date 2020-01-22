@@ -22,7 +22,7 @@ pod 'EtherscanClient'
 
 ## Author
 
-jsdu@uwaterloo.ca, jsdu@uwaterloo.ca
+contact@dujason.com
 
 ## License
 
