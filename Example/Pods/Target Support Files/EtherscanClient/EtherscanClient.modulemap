@@ -1,0 +1,6 @@
+framework module EtherscanClient {
+  umbrella header "EtherscanClient-umbrella.h"
+
+  export *
+  module * { export * }
+}

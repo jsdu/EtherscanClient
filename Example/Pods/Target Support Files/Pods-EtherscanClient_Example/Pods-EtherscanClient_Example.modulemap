@@ -1,0 +1,6 @@
+framework module Pods_EtherscanClient_Example {
+  umbrella header "Pods-EtherscanClient_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

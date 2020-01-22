@@ -1,0 +1,770 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2AEF417DE1DC64BB9315ACAC5DD0EE29 /* Pods-EtherscanClient_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 993BACF97EA764A2329B7E67AEED4A51 /* Pods-EtherscanClient_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46F216D70564D507794D2E4D2C8E864A /* Pods-EtherscanClient_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C13B1448F0B87A907894A7D9D9AF /* Pods-EtherscanClient_Example-dummy.m */; };
+		531A51299EEDDFFE5D0DFEB5255DB190 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		A30638830DC8BA7A2160DE18D245C09F /* EtherscanClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 40BC4D80EABA0D709267DB5F376BE6CB /* EtherscanClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6EDC0FA5B16D68696EEA2C6E3180BA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		B8EE151C66B1E1BCEE1E1E9F14CB165A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		D6C5C0958680AA789E3E070AC147110E /* EtherscanClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 253B5B6BF76AAF8D07BA4109895D8C7A /* EtherscanClient-dummy.m */; };
+		F2CF833668905221E1C3A2D1B5CA693F /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6ECCDDF9885D6681C16BF26122280 /* ReplaceMe.swift */; };
+		F7C8BA13AB5A221153ED0F6AD69E09CC /* Pods-EtherscanClient_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D21320902B1CE633FD177E786DB4267 /* Pods-EtherscanClient_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F876DD665763484A468D49AF0F40C7F6 /* Pods-EtherscanClient_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6106CF2E8CCEA9010B1082D4888191 /* Pods-EtherscanClient_Tests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0544C118E5674DE2AFE050B048C9FC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5EA71F3A547A7986D33F874EE166F50;
+			remoteInfo = "Pods-EtherscanClient_Example";
+		};
+		FFC4001DF8871EC413234BD9FC9BA426 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81BD9AC2E65272EDC193B1FBAC385174;
+			remoteInfo = EtherscanClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		253B5B6BF76AAF8D07BA4109895D8C7A /* EtherscanClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EtherscanClient-dummy.m"; sourceTree = "<group>"; };
+		2B6106CF2E8CCEA9010B1082D4888191 /* Pods-EtherscanClient_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EtherscanClient_Tests-dummy.m"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		37C9611435DB3831173FC45A6D460C63 /* Pods-EtherscanClient_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EtherscanClient_Tests.modulemap"; sourceTree = "<group>"; };
+		40BC4D80EABA0D709267DB5F376BE6CB /* EtherscanClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EtherscanClient-umbrella.h"; sourceTree = "<group>"; };
+		48FEFAD63F64F0EECF5B7707B4A849C6 /* EtherscanClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EtherscanClient.xcconfig; sourceTree = "<group>"; };
+		496FCED49E16FE8A30934634876ADC30 /* EtherscanClient-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EtherscanClient-Info.plist"; sourceTree = "<group>"; };
+		652C21782B7FEA8B9C9CF2D95F3F2366 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		6AA6B3976F45CB3C3E506FC99475937D /* Pods-EtherscanClient_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EtherscanClient_Example-frameworks.sh"; sourceTree = "<group>"; };
+		70E091512D3B4E08A60AECEC11814F97 /* Pods_EtherscanClient_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EtherscanClient_Tests.framework; path = "Pods-EtherscanClient_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		898FEC06D27218C6274ABC635A178660 /* Pods-EtherscanClient_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EtherscanClient_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8B5F0BF66713FE931D06E4BDFDF573C9 /* Pods_EtherscanClient_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EtherscanClient_Example.framework; path = "Pods-EtherscanClient_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EC93AA3BAAB5D4C949D37FB45ADE445 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9018FE6BD1375F0E67CF0D1B6524DDF2 /* EtherscanClient.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EtherscanClient.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95C46F419B4C07617F2188FA3791BF99 /* Pods-EtherscanClient_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EtherscanClient_Example-Info.plist"; sourceTree = "<group>"; };
+		993BACF97EA764A2329B7E67AEED4A51 /* Pods-EtherscanClient_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EtherscanClient_Example-umbrella.h"; sourceTree = "<group>"; };
+		9C36E69A513BF7294E9B40A9ADE64F95 /* Pods-EtherscanClient_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EtherscanClient_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		9CF0C13B1448F0B87A907894A7D9D9AF /* Pods-EtherscanClient_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EtherscanClient_Example-dummy.m"; sourceTree = "<group>"; };
+		9D21320902B1CE633FD177E786DB4267 /* Pods-EtherscanClient_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EtherscanClient_Tests-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0446EDDB2422108A830D4E2F451648B /* Pods-EtherscanClient_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EtherscanClient_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A4090FD18B04A2FE6713B5C176B556D5 /* Pods-EtherscanClient_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EtherscanClient_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B3A47C51C3E2564D4F4B75AB44AA2697 /* Pods-EtherscanClient_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EtherscanClient_Tests-Info.plist"; sourceTree = "<group>"; };
+		C126EF78A1123D01F0BAD017C0F3DFC2 /* EtherscanClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EtherscanClient.modulemap; sourceTree = "<group>"; };
+		DB97831CB2BED6C3BDCD9AE20FF9B2E2 /* Pods-EtherscanClient_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EtherscanClient_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E2608CBB9C6FF6D5521816D7A1B8FA7B /* Pods-EtherscanClient_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EtherscanClient_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E4904D6AC2C4DF1F03E9160F3DAD1974 /* EtherscanClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EtherscanClient-prefix.pch"; sourceTree = "<group>"; };
+		E4F14A7234ED7C37B2D1046944384070 /* EtherscanClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EtherscanClient.framework; path = EtherscanClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC6ECCDDF9885D6681C16BF26122280 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = EtherscanClient/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		F2D7D72A5FE74A48F277C81047438CEF /* Pods-EtherscanClient_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EtherscanClient_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FD7819936836E083BE2EB3E8E4DB418E /* Pods-EtherscanClient_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EtherscanClient_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FE144E241FF24FF0146419547717FDBF /* Pods-EtherscanClient_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EtherscanClient_Example.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		071C75EA23587FBD2464A41C81746F22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6EDC0FA5B16D68696EEA2C6E3180BA0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10B8ACD41528F906FAF7D24D8354447D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8EE151C66B1E1BCEE1E1E9F14CB165A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1692801B655699CC479E212490BDCD35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531A51299EEDDFFE5D0DFEB5255DB190 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F83E20286B110A39BAD56D6F53F83A0 /* Pods-EtherscanClient_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				37C9611435DB3831173FC45A6D460C63 /* Pods-EtherscanClient_Tests.modulemap */,
+				FD7819936836E083BE2EB3E8E4DB418E /* Pods-EtherscanClient_Tests-acknowledgements.markdown */,
+				DB97831CB2BED6C3BDCD9AE20FF9B2E2 /* Pods-EtherscanClient_Tests-acknowledgements.plist */,
+				2B6106CF2E8CCEA9010B1082D4888191 /* Pods-EtherscanClient_Tests-dummy.m */,
+				B3A47C51C3E2564D4F4B75AB44AA2697 /* Pods-EtherscanClient_Tests-Info.plist */,
+				9D21320902B1CE633FD177E786DB4267 /* Pods-EtherscanClient_Tests-umbrella.h */,
+				E2608CBB9C6FF6D5521816D7A1B8FA7B /* Pods-EtherscanClient_Tests.debug.xcconfig */,
+				A4090FD18B04A2FE6713B5C176B556D5 /* Pods-EtherscanClient_Tests.release.xcconfig */,
+			);
+			name = "Pods-EtherscanClient_Tests";
+			path = "Target Support Files/Pods-EtherscanClient_Tests";
+			sourceTree = "<group>";
+		};
+		27024C7842F3430A6CCDD8D852A0A7AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4F14A7234ED7C37B2D1046944384070 /* EtherscanClient.framework */,
+				8B5F0BF66713FE931D06E4BDFDF573C9 /* Pods_EtherscanClient_Example.framework */,
+				70E091512D3B4E08A60AECEC11814F97 /* Pods_EtherscanClient_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		356894F97D38695A7F333D85F37DE10C /* EtherscanClient */ = {
+			isa = PBXGroup;
+			children = (
+				ECC6ECCDDF9885D6681C16BF26122280 /* ReplaceMe.swift */,
+				E49DC47BD0CB5BC54F4D4E88E661D52A /* Pod */,
+				B81AC07A624D60E48D04186A0BC8DE7A /* Support Files */,
+			);
+			name = EtherscanClient;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		4D68EBD35E3F1EE566F4385AB2F93B66 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				356894F97D38695A7F333D85F37DE10C /* EtherscanClient */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		AE85804B1D55C7B0B6101117002C2C49 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFE7FB2D98F93969F85A426E64065434 /* Pods-EtherscanClient_Example */,
+				1F83E20286B110A39BAD56D6F53F83A0 /* Pods-EtherscanClient_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B81AC07A624D60E48D04186A0BC8DE7A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C126EF78A1123D01F0BAD017C0F3DFC2 /* EtherscanClient.modulemap */,
+				48FEFAD63F64F0EECF5B7707B4A849C6 /* EtherscanClient.xcconfig */,
+				253B5B6BF76AAF8D07BA4109895D8C7A /* EtherscanClient-dummy.m */,
+				496FCED49E16FE8A30934634876ADC30 /* EtherscanClient-Info.plist */,
+				E4904D6AC2C4DF1F03E9160F3DAD1974 /* EtherscanClient-prefix.pch */,
+				40BC4D80EABA0D709267DB5F376BE6CB /* EtherscanClient-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/EtherscanClient";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				4D68EBD35E3F1EE566F4385AB2F93B66 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				27024C7842F3430A6CCDD8D852A0A7AF /* Products */,
+				AE85804B1D55C7B0B6101117002C2C49 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E49DC47BD0CB5BC54F4D4E88E661D52A /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				9018FE6BD1375F0E67CF0D1B6524DDF2 /* EtherscanClient.podspec */,
+				652C21782B7FEA8B9C9CF2D95F3F2366 /* LICENSE */,
+				8EC93AA3BAAB5D4C949D37FB45ADE445 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		EFE7FB2D98F93969F85A426E64065434 /* Pods-EtherscanClient_Example */ = {
+			isa = PBXGroup;
+			children = (
+				FE144E241FF24FF0146419547717FDBF /* Pods-EtherscanClient_Example.modulemap */,
+				F2D7D72A5FE74A48F277C81047438CEF /* Pods-EtherscanClient_Example-acknowledgements.markdown */,
+				9C36E69A513BF7294E9B40A9ADE64F95 /* Pods-EtherscanClient_Example-acknowledgements.plist */,
+				9CF0C13B1448F0B87A907894A7D9D9AF /* Pods-EtherscanClient_Example-dummy.m */,
+				6AA6B3976F45CB3C3E506FC99475937D /* Pods-EtherscanClient_Example-frameworks.sh */,
+				95C46F419B4C07617F2188FA3791BF99 /* Pods-EtherscanClient_Example-Info.plist */,
+				993BACF97EA764A2329B7E67AEED4A51 /* Pods-EtherscanClient_Example-umbrella.h */,
+				898FEC06D27218C6274ABC635A178660 /* Pods-EtherscanClient_Example.debug.xcconfig */,
+				A0446EDDB2422108A830D4E2F451648B /* Pods-EtherscanClient_Example.release.xcconfig */,
+			);
+			name = "Pods-EtherscanClient_Example";
+			path = "Target Support Files/Pods-EtherscanClient_Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		54F6B621C448A37B550CF4228811F7DB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AEF417DE1DC64BB9315ACAC5DD0EE29 /* Pods-EtherscanClient_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1985DC63492FF0E24FEDF51DE9A26E5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C8BA13AB5A221153ED0F6AD69E09CC /* Pods-EtherscanClient_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBDE8422BE476605CBAC03FB6CB67F5D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30638830DC8BA7A2160DE18D245C09F /* EtherscanClient-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		25D7E9B725B655DC1F2CA0A0F8230B27 /* Pods-EtherscanClient_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 026F7043E05C04305500AE0EE7F002D2 /* Build configuration list for PBXNativeTarget "Pods-EtherscanClient_Tests" */;
+			buildPhases = (
+				C1985DC63492FF0E24FEDF51DE9A26E5 /* Headers */,
+				BE2855EAFB4513B3C094493D66AA4307 /* Sources */,
+				10B8ACD41528F906FAF7D24D8354447D /* Frameworks */,
+				1096C3F5D3FA67482BA772AE556689E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76E4474E3C45D816BCFC8699F58C910E /* PBXTargetDependency */,
+			);
+			name = "Pods-EtherscanClient_Tests";
+			productName = "Pods-EtherscanClient_Tests";
+			productReference = 70E091512D3B4E08A60AECEC11814F97 /* Pods_EtherscanClient_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		81BD9AC2E65272EDC193B1FBAC385174 /* EtherscanClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C900845483B2D6207124D9EBD2DEB74 /* Build configuration list for PBXNativeTarget "EtherscanClient" */;
+			buildPhases = (
+				DBDE8422BE476605CBAC03FB6CB67F5D /* Headers */,
+				3316900D3F3670BB9E1A081EAAE5D3A5 /* Sources */,
+				071C75EA23587FBD2464A41C81746F22 /* Frameworks */,
+				6A00CB952A1C2034F9FB62015C6695F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EtherscanClient;
+			productName = EtherscanClient;
+			productReference = E4F14A7234ED7C37B2D1046944384070 /* EtherscanClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D5EA71F3A547A7986D33F874EE166F50 /* Pods-EtherscanClient_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EF6D79368679C09165CAE3656A73483 /* Build configuration list for PBXNativeTarget "Pods-EtherscanClient_Example" */;
+			buildPhases = (
+				54F6B621C448A37B550CF4228811F7DB /* Headers */,
+				ECEC5F7A42FF0089F9D25D527F4C634C /* Sources */,
+				1692801B655699CC479E212490BDCD35 /* Frameworks */,
+				E28066081D12DAFF2A9C8849CCD599FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A616A848A88277128E99B231254A141F /* PBXTargetDependency */,
+			);
+			name = "Pods-EtherscanClient_Example";
+			productName = "Pods-EtherscanClient_Example";
+			productReference = 8B5F0BF66713FE931D06E4BDFDF573C9 /* Pods_EtherscanClient_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 27024C7842F3430A6CCDD8D852A0A7AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81BD9AC2E65272EDC193B1FBAC385174 /* EtherscanClient */,
+				D5EA71F3A547A7986D33F874EE166F50 /* Pods-EtherscanClient_Example */,
+				25D7E9B725B655DC1F2CA0A0F8230B27 /* Pods-EtherscanClient_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1096C3F5D3FA67482BA772AE556689E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A00CB952A1C2034F9FB62015C6695F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28066081D12DAFF2A9C8849CCD599FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3316900D3F3670BB9E1A081EAAE5D3A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6C5C0958680AA789E3E070AC147110E /* EtherscanClient-dummy.m in Sources */,
+				F2CF833668905221E1C3A2D1B5CA693F /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE2855EAFB4513B3C094493D66AA4307 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F876DD665763484A468D49AF0F40C7F6 /* Pods-EtherscanClient_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECEC5F7A42FF0089F9D25D527F4C634C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46F216D70564D507794D2E4D2C8E864A /* Pods-EtherscanClient_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		76E4474E3C45D816BCFC8699F58C910E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-EtherscanClient_Example";
+			target = D5EA71F3A547A7986D33F874EE166F50 /* Pods-EtherscanClient_Example */;
+			targetProxy = B0544C118E5674DE2AFE050B048C9FC5 /* PBXContainerItemProxy */;
+		};
+		A616A848A88277128E99B231254A141F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EtherscanClient;
+			target = 81BD9AC2E65272EDC193B1FBAC385174 /* EtherscanClient */;
+			targetProxy = FFC4001DF8871EC413234BD9FC9BA426 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4B726C50983D2E818D527BFF6D7E7D05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0446EDDB2422108A830D4E2F451648B /* Pods-EtherscanClient_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EtherscanClient_Example/Pods-EtherscanClient_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EtherscanClient_Example/Pods-EtherscanClient_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		51DB35A3499719A5E5E1E421310F5BD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4090FD18B04A2FE6713B5C176B556D5 /* Pods-EtherscanClient_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EtherscanClient_Tests/Pods-EtherscanClient_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EtherscanClient_Tests/Pods-EtherscanClient_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5F091F9177F2B32DA3C8A8EBB748A9E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2608CBB9C6FF6D5521816D7A1B8FA7B /* Pods-EtherscanClient_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EtherscanClient_Tests/Pods-EtherscanClient_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EtherscanClient_Tests/Pods-EtherscanClient_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		617209CCE59B6D227E4E23F720D364E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48FEFAD63F64F0EECF5B7707B4A849C6 /* EtherscanClient.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EtherscanClient/EtherscanClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EtherscanClient/EtherscanClient-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EtherscanClient/EtherscanClient.modulemap";
+				PRODUCT_MODULE_NAME = EtherscanClient;
+				PRODUCT_NAME = EtherscanClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		901FE8CD9BB813C99B5F64C483A1D9AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 898FEC06D27218C6274ABC635A178660 /* Pods-EtherscanClient_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EtherscanClient_Example/Pods-EtherscanClient_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EtherscanClient_Example/Pods-EtherscanClient_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A73AF50342703C35E091906A67D4E966 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48FEFAD63F64F0EECF5B7707B4A849C6 /* EtherscanClient.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EtherscanClient/EtherscanClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EtherscanClient/EtherscanClient-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EtherscanClient/EtherscanClient.modulemap";
+				PRODUCT_MODULE_NAME = EtherscanClient;
+				PRODUCT_NAME = EtherscanClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B0087CB4594321EF41619F3181FE120E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		026F7043E05C04305500AE0EE7F002D2 /* Build configuration list for PBXNativeTarget "Pods-EtherscanClient_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F091F9177F2B32DA3C8A8EBB748A9E4 /* Debug */,
+				51DB35A3499719A5E5E1E421310F5BD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
+				B0087CB4594321EF41619F3181FE120E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EF6D79368679C09165CAE3656A73483 /* Build configuration list for PBXNativeTarget "Pods-EtherscanClient_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				901FE8CD9BB813C99B5F64C483A1D9AB /* Debug */,
+				4B726C50983D2E818D527BFF6D7E7D05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C900845483B2D6207124D9EBD2DEB74 /* Build configuration list for PBXNativeTarget "EtherscanClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A73AF50342703C35E091906A67D4E966 /* Debug */,
+				617209CCE59B6D227E4E23F720D364E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -1,0 +1,16 @@
+PODS:
+  - EtherscanClient (0.1.0)
+
+DEPENDENCIES:
+  - EtherscanClient (from `../`)
+
+EXTERNAL SOURCES:
+  EtherscanClient:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EtherscanClient: 4e0b6499e9be461765f184f63f7383c2fc953870
+
+PODFILE CHECKSUM: 0e0867120be5874e03af13b5f061982ee0f34572
+
+COCOAPODS: 1.8.4

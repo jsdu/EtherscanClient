@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		32EA9CF9B470F1A076BE7170 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		32EA9CF9B470F1A076BE7170 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		56C503379C2FE254FFCE9BCD /* Pods_EtherscanClient_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EtherscanClient_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* EtherscanClient_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EtherscanClient_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,11 +40,11 @@
 		607FACE51AFB9204008FA782 /* EtherscanClient_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EtherscanClient_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		62B409B90E08CD92A282C454 /* EtherscanClient.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = EtherscanClient.podspec; path = ../EtherscanClient.podspec; sourceTree = "<group>"; };
+		62B409B90E08CD92A282C454 /* EtherscanClient.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EtherscanClient.podspec; path = ../EtherscanClient.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		81EBFE621BD6A90C5404AC85 /* Pods-EtherscanClient_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EtherscanClient_Example.release.xcconfig"; path = "Target Support Files/Pods-EtherscanClient_Example/Pods-EtherscanClient_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AC772F672EE102465B4E5DB2 /* Pods_EtherscanClient_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EtherscanClient_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA1336121A17E483D823890 /* Pods-EtherscanClient_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EtherscanClient_Example.debug.xcconfig"; path = "Target Support Files/Pods-EtherscanClient_Example/Pods-EtherscanClient_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B8ABAF1C977EA4F01FFD770C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B8ABAF1C977EA4F01FFD770C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E597BD088058146B89C090B9 /* Pods-EtherscanClient_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EtherscanClient_Tests.release.xcconfig"; path = "Target Support Files/Pods-EtherscanClient_Tests/Pods-EtherscanClient_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EDDD6FA2A76B19F98C048B72 /* Pods-EtherscanClient_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EtherscanClient_Tests.debug.xcconfig"; path = "Target Support Files/Pods-EtherscanClient_Tests/Pods-EtherscanClient_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,7 +86,6 @@
 				EDDD6FA2A76B19F98C048B72 /* Pods-EtherscanClient_Tests.debug.xcconfig */,
 				E597BD088058146B89C090B9 /* Pods-EtherscanClient_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
