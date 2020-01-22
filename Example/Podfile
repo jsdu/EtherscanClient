@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'EtherscanClient_Example' do
+  pod 'EtherscanClient', :path => '../'
+
+  target 'EtherscanClient_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
