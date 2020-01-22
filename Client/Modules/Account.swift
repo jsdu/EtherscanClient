@@ -8,14 +8,8 @@
 
 import Foundation
 
-public class Account: ApiClient {
-    let accountAddress: String
-
-    init(apiKey: String, address: String, session: URLSession) {
-        self.accountAddress = address
-
-        super.init(apiKey: apiKey, session: session)
-    }
+// Account Module
+extension EtherscanClient {
 
     /// Get Ether Balance for multiple Addresses in a single call
     /// Up to a maxium of 20 accounts in a single batch

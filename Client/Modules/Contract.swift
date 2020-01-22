@@ -7,7 +7,8 @@
 
 import Foundation
 
-public class Contract: ApiClient {
+// Contract Module
+extension EtherscanClient {
 
     public func getContractABI(address: String, completion: @escaping (Result<String, DataResponseError>) -> Void) {
         let urlQuery = [URLQueryItem(name: .address, value: address)]

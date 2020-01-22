@@ -8,7 +8,8 @@
 
 import Foundation
 
-public class Token: ApiClient {
+// Token Module
+extension EtherscanClient {
 
     /// Get ERC20-Token TotalSupply by ContractAddress
     public func getErc20TotalSupply(contractAddress: String, completion: @escaping (Result<String, DataResponseError>) -> Void) {

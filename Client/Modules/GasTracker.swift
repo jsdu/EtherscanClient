@@ -8,7 +8,8 @@
 
 import Foundation
 
-public class GasTracker: ApiClient {
+// Gas Tracker
+extension EtherscanClient {
 
     /// Get Estimation of Confirmation Time
     /// (Result returned in seconds, gasprice value in Wei)
