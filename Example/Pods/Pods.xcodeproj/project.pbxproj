@@ -14,15 +14,15 @@
 		B6EDC0FA5B16D68696EEA2C6E3180BA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		B8EE151C66B1E1BCEE1E1E9F14CB165A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		D6C5C0958680AA789E3E070AC147110E /* EtherscanClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 253B5B6BF76AAF8D07BA4109895D8C7A /* EtherscanClient-dummy.m */; };
-		F0F46A0123D801AB00F3FDDE /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469ED23D801AB00F3FDDE /* Status.swift */; };
-		F0F46A0223D801AB00F3FDDE /* GasOracle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469EF23D801AB00F3FDDE /* GasOracle.swift */; };
+		F0F46A0123D801AB00F3FDDE /* TransactionStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469ED23D801AB00F3FDDE /* TransactionStatusModel.swift */; };
+		F0F46A0223D801AB00F3FDDE /* GasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469EF23D801AB00F3FDDE /* GasModel.swift */; };
 		F0F46A0323D801AB00F3FDDE /* ESResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469F023D801AB00F3FDDE /* ESResult.swift */; };
 		F0F46A0423D801AB00F3FDDE /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469F123D801AB00F3FDDE /* Utility.swift */; };
-		F0F46A0523D801AB00F3FDDE /* Erc20Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469F323D801AB00F3FDDE /* Erc20Transfer.swift */; };
-		F0F46A0623D801AB00F3FDDE /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469F423D801AB00F3FDDE /* Block.swift */; };
-		F0F46A0723D801AB00F3FDDE /* InternalTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469F523D801AB00F3FDDE /* InternalTransaction.swift */; };
-		F0F46A0823D801AB00F3FDDE /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469F623D801AB00F3FDDE /* Balance.swift */; };
-		F0F46A0923D801AB00F3FDDE /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469F723D801AB00F3FDDE /* Transaction.swift */; };
+		F0F46A0523D801AB00F3FDDE /* Erc20TransferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469F323D801AB00F3FDDE /* Erc20TransferModel.swift */; };
+		F0F46A0623D801AB00F3FDDE /* BlockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469F423D801AB00F3FDDE /* BlockModel.swift */; };
+		F0F46A0723D801AB00F3FDDE /* InternalTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469F523D801AB00F3FDDE /* InternalTransactionModel.swift */; };
+		F0F46A0823D801AB00F3FDDE /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469F623D801AB00F3FDDE /* BalanceModel.swift */; };
+		F0F46A0923D801AB00F3FDDE /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469F723D801AB00F3FDDE /* TransactionModel.swift */; };
 		F0F46A0A23D801AB00F3FDDE /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469F923D801AB00F3FDDE /* Query.swift */; };
 		F0F46A0B23D801AB00F3FDDE /* GasTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469FB23D801AB00F3FDDE /* GasTracker.swift */; };
 		F0F46A0C23D801AB00F3FDDE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469FC23D801AB00F3FDDE /* Account.swift */; };
@@ -31,6 +31,11 @@
 		F0F46A0F23D801AB00F3FDDE /* EtherscanClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F469FF23D801AB00F3FDDE /* EtherscanClient.swift */; };
 		F0F46A1723D89DA100F3FDDE /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A1623D89DA100F3FDDE /* Contract.swift */; };
 		F0F46A1923D8A19D00F3FDDE /* SourceCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A1823D8A19D00F3FDDE /* SourceCodeModel.swift */; };
+		F0F46A1C23D8FC3700F3FDDE /* EventLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A1B23D8FC3700F3FDDE /* EventLog.swift */; };
+		F0F46A1E23D919B700F3FDDE /* EventLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A1D23D919B700F3FDDE /* EventLogModel.swift */; };
+		F0F46A2123D97B6100F3FDDE /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A2023D97B6100F3FDDE /* Stats.swift */; };
+		F0F46A2323D97D0500F3FDDE /* NodeSizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A2223D97D0500F3FDDE /* NodeSizeModel.swift */; };
+		F0F46A2623D983B000F3FDDE /* EthPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A2523D983B000F3FDDE /* EthPrice.swift */; };
 		F7C8BA13AB5A221153ED0F6AD69E09CC /* Pods-EtherscanClient_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D21320902B1CE633FD177E786DB4267 /* Pods-EtherscanClient_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F876DD665763484A468D49AF0F40C7F6 /* Pods-EtherscanClient_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6106CF2E8CCEA9010B1082D4888191 /* Pods-EtherscanClient_Tests-dummy.m */; };
 /* End PBXBuildFile section */
@@ -81,15 +86,15 @@
 		E2608CBB9C6FF6D5521816D7A1B8FA7B /* Pods-EtherscanClient_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EtherscanClient_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E4904D6AC2C4DF1F03E9160F3DAD1974 /* EtherscanClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EtherscanClient-prefix.pch"; sourceTree = "<group>"; };
 		E4F14A7234ED7C37B2D1046944384070 /* EtherscanClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EtherscanClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0F469ED23D801AB00F3FDDE /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
-		F0F469EF23D801AB00F3FDDE /* GasOracle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasOracle.swift; sourceTree = "<group>"; };
+		F0F469ED23D801AB00F3FDDE /* TransactionStatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionStatusModel.swift; sourceTree = "<group>"; };
+		F0F469EF23D801AB00F3FDDE /* GasModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasModel.swift; sourceTree = "<group>"; };
 		F0F469F023D801AB00F3FDDE /* ESResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESResult.swift; sourceTree = "<group>"; };
 		F0F469F123D801AB00F3FDDE /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
-		F0F469F323D801AB00F3FDDE /* Erc20Transfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Erc20Transfer.swift; sourceTree = "<group>"; };
-		F0F469F423D801AB00F3FDDE /* Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
-		F0F469F523D801AB00F3FDDE /* InternalTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalTransaction.swift; sourceTree = "<group>"; };
-		F0F469F623D801AB00F3FDDE /* Balance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
-		F0F469F723D801AB00F3FDDE /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		F0F469F323D801AB00F3FDDE /* Erc20TransferModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Erc20TransferModel.swift; sourceTree = "<group>"; };
+		F0F469F423D801AB00F3FDDE /* BlockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockModel.swift; sourceTree = "<group>"; };
+		F0F469F523D801AB00F3FDDE /* InternalTransactionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalTransactionModel.swift; sourceTree = "<group>"; };
+		F0F469F623D801AB00F3FDDE /* BalanceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
+		F0F469F723D801AB00F3FDDE /* TransactionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		F0F469F923D801AB00F3FDDE /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		F0F469FB23D801AB00F3FDDE /* GasTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasTracker.swift; sourceTree = "<group>"; };
 		F0F469FC23D801AB00F3FDDE /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -98,6 +103,11 @@
 		F0F469FF23D801AB00F3FDDE /* EtherscanClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtherscanClient.swift; sourceTree = "<group>"; };
 		F0F46A1623D89DA100F3FDDE /* Contract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
 		F0F46A1823D8A19D00F3FDDE /* SourceCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceCodeModel.swift; sourceTree = "<group>"; };
+		F0F46A1B23D8FC3700F3FDDE /* EventLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLog.swift; sourceTree = "<group>"; };
+		F0F46A1D23D919B700F3FDDE /* EventLogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogModel.swift; sourceTree = "<group>"; };
+		F0F46A2023D97B6100F3FDDE /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		F0F46A2223D97D0500F3FDDE /* NodeSizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeSizeModel.swift; sourceTree = "<group>"; };
+		F0F46A2523D983B000F3FDDE /* EthPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthPrice.swift; sourceTree = "<group>"; };
 		F2D7D72A5FE74A48F277C81047438CEF /* Pods-EtherscanClient_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EtherscanClient_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FD7819936836E083BE2EB3E8E4DB418E /* Pods-EtherscanClient_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EtherscanClient_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FE144E241FF24FF0146419547717FDBF /* Pods-EtherscanClient_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EtherscanClient_Example.modulemap"; sourceTree = "<group>"; };
@@ -269,6 +279,8 @@
 			children = (
 				F0F469F023D801AB00F3FDDE /* ESResult.swift */,
 				F0F469F123D801AB00F3FDDE /* Utility.swift */,
+				F0F46A2423D97E4700F3FDDE /* Stats */,
+				F0F46A1F23D91A0F00F3FDDE /* EventLog */,
 				F0F469EC23D801AB00F3FDDE /* Transaction */,
 				F0F469EE23D801AB00F3FDDE /* Gas */,
 				F0F46A1A23D8A20400F3FDDE /* Contract */,
@@ -280,7 +292,7 @@
 		F0F469EC23D801AB00F3FDDE /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
-				F0F469ED23D801AB00F3FDDE /* Status.swift */,
+				F0F469ED23D801AB00F3FDDE /* TransactionStatusModel.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -288,7 +300,7 @@
 		F0F469EE23D801AB00F3FDDE /* Gas */ = {
 			isa = PBXGroup;
 			children = (
-				F0F469EF23D801AB00F3FDDE /* GasOracle.swift */,
+				F0F469EF23D801AB00F3FDDE /* GasModel.swift */,
 			);
 			path = Gas;
 			sourceTree = "<group>";
@@ -296,11 +308,11 @@
 		F0F469F223D801AB00F3FDDE /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				F0F469F323D801AB00F3FDDE /* Erc20Transfer.swift */,
-				F0F469F423D801AB00F3FDDE /* Block.swift */,
-				F0F469F523D801AB00F3FDDE /* InternalTransaction.swift */,
-				F0F469F623D801AB00F3FDDE /* Balance.swift */,
-				F0F469F723D801AB00F3FDDE /* Transaction.swift */,
+				F0F469F323D801AB00F3FDDE /* Erc20TransferModel.swift */,
+				F0F469F423D801AB00F3FDDE /* BlockModel.swift */,
+				F0F469F523D801AB00F3FDDE /* InternalTransactionModel.swift */,
+				F0F469F623D801AB00F3FDDE /* BalanceModel.swift */,
+				F0F469F723D801AB00F3FDDE /* TransactionModel.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -320,7 +332,9 @@
 				F0F469FC23D801AB00F3FDDE /* Account.swift */,
 				F0F469FD23D801AB00F3FDDE /* Token.swift */,
 				F0F469FE23D801AB00F3FDDE /* TransactionStatus.swift */,
+				F0F46A1B23D8FC3700F3FDDE /* EventLog.swift */,
 				F0F46A1623D89DA100F3FDDE /* Contract.swift */,
+				F0F46A2023D97B6100F3FDDE /* Stats.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -331,6 +345,23 @@
 				F0F46A1823D8A19D00F3FDDE /* SourceCodeModel.swift */,
 			);
 			path = Contract;
+			sourceTree = "<group>";
+		};
+		F0F46A1F23D91A0F00F3FDDE /* EventLog */ = {
+			isa = PBXGroup;
+			children = (
+				F0F46A1D23D919B700F3FDDE /* EventLogModel.swift */,
+			);
+			path = EventLog;
+			sourceTree = "<group>";
+		};
+		F0F46A2423D97E4700F3FDDE /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				F0F46A2223D97D0500F3FDDE /* NodeSizeModel.swift */,
+				F0F46A2523D983B000F3FDDE /* EthPrice.swift */,
+			);
+			path = Stats;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,24 +513,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F46A2623D983B000F3FDDE /* EthPrice.swift in Sources */,
 				F0F46A0423D801AB00F3FDDE /* Utility.swift in Sources */,
 				F0F46A0D23D801AB00F3FDDE /* Token.swift in Sources */,
+				F0F46A1E23D919B700F3FDDE /* EventLogModel.swift in Sources */,
 				F0F46A0C23D801AB00F3FDDE /* Account.swift in Sources */,
 				F0F46A0F23D801AB00F3FDDE /* EtherscanClient.swift in Sources */,
-				F0F46A0623D801AB00F3FDDE /* Block.swift in Sources */,
+				F0F46A0623D801AB00F3FDDE /* BlockModel.swift in Sources */,
 				F0F46A0323D801AB00F3FDDE /* ESResult.swift in Sources */,
+				F0F46A1C23D8FC3700F3FDDE /* EventLog.swift in Sources */,
 				D6C5C0958680AA789E3E070AC147110E /* EtherscanClient-dummy.m in Sources */,
-				F0F46A0923D801AB00F3FDDE /* Transaction.swift in Sources */,
+				F0F46A0923D801AB00F3FDDE /* TransactionModel.swift in Sources */,
+				F0F46A2323D97D0500F3FDDE /* NodeSizeModel.swift in Sources */,
+				F0F46A2123D97B6100F3FDDE /* Stats.swift in Sources */,
 				F0F46A0A23D801AB00F3FDDE /* Query.swift in Sources */,
 				F0F46A1923D8A19D00F3FDDE /* SourceCodeModel.swift in Sources */,
 				F0F46A0B23D801AB00F3FDDE /* GasTracker.swift in Sources */,
-				F0F46A0823D801AB00F3FDDE /* Balance.swift in Sources */,
-				F0F46A0223D801AB00F3FDDE /* GasOracle.swift in Sources */,
+				F0F46A0823D801AB00F3FDDE /* BalanceModel.swift in Sources */,
+				F0F46A0223D801AB00F3FDDE /* GasModel.swift in Sources */,
 				F0F46A0E23D801AB00F3FDDE /* TransactionStatus.swift in Sources */,
-				F0F46A0123D801AB00F3FDDE /* Status.swift in Sources */,
+				F0F46A0123D801AB00F3FDDE /* TransactionStatusModel.swift in Sources */,
 				F0F46A1723D89DA100F3FDDE /* Contract.swift in Sources */,
-				F0F46A0523D801AB00F3FDDE /* Erc20Transfer.swift in Sources */,
-				F0F46A0723D801AB00F3FDDE /* InternalTransaction.swift in Sources */,
+				F0F46A0523D801AB00F3FDDE /* Erc20TransferModel.swift in Sources */,
+				F0F46A0723D801AB00F3FDDE /* InternalTransactionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,7 +699,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -730,7 +766,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

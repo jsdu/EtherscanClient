@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct ExecutionStatus: Codable {
+public struct ExecutionStatusModel: Codable {
     let isError: Bool
     let errDescription: String?
 
@@ -20,7 +20,7 @@ public struct ExecutionStatus: Codable {
     }
 }
 
-public struct ReceiptStatus: Codable {
+public struct ReceiptStatusModel: Codable {
     let status: Bool
 
     public init(from decoder: Decoder) throws {

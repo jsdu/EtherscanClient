@@ -14,6 +14,7 @@ enum Module: String {
     case stats
     case gastracker
     case contract
+    case logs
 }
 
 enum Action: String {
@@ -41,9 +42,17 @@ enum Action: String {
     // Contract
     case getabi
     case getsourcecode
+
+    // Event
+    case getLogs
+
+    // Stats
+    case ethsupply
+    case ethprice
+    case chainsize
 }
 
-enum Query: String {
+public enum Query: String {
     case module
     case action
     case apikey
@@ -56,9 +65,42 @@ enum Query: String {
     case txhash
     case blocktype
     case gasprice
+
+    // Event Log API
+    case fromBlock // 'latest', '40000'
+    case toBlock  // 'latest', '40000'
+
+    public enum Topic: String {
+        case topic0
+        case topic1
+        case topic2
+        case topic3
+    }
+
+    case topic0_1_opr
+    case topic1_2_opr
+    case topic2_3_opr
+    case topic0_2_opr
+    case topic0_3_opr
+    case topic1_3_opr
+
+    case startdate
+    case enddate
+    case clienttype
+    case syncmode
+}
+
+public enum ClientType: String {
+    case geth
+    case parity
 }
 
 public enum BlockType: String {
     case blocks
     case uncles
+}
+
+public enum TopicOperator: String {
+    case and
+    case or
 }

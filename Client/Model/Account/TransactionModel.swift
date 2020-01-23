@@ -9,7 +9,7 @@
 import Foundation
 
 
-public struct Transaction: Codable {
+public struct TransactionModel: Codable {
     let blockNumber: Int
     let timeStamp: String
     let hash: String

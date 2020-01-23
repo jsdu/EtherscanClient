@@ -9,7 +9,7 @@
 import Foundation
 
 
-public struct Erc20Transfer: Codable {
+public struct Erc20TransferModel: Codable {
     let blockNumber: Int
     let timeStamp: String
     let hash: String

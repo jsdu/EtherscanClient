@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct GasOracle: Codable {
+public struct GasModel: Codable {
     let LastBlock: Int
     let SafeGasPrice: Double
     let ProposeGasPrice: Double

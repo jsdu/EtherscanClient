@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct InternalBalance: Codable {
+public struct InternalTransactionModel: Codable {
     let blockNumber: Int
     let timeStamp: String
     let hash: String

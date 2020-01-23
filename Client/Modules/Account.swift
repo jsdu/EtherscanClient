@@ -11,10 +11,14 @@ import Foundation
 // Account Module
 extension EtherscanClient {
 
-    /// Get Ether Balance for multiple Addresses in a single call
-    /// Up to a maxium of 20 accounts in a single batch
-    /// @return Returns the account balances as an array of Balance objects
-    public func getBalance(addresses: [String]? = nil, completion: @escaping (Result<[Balance], DataResponseError>) -> Void) {
+    /**
+     Get Ether Balance for address.
+     Up to a maxium of 20 accounts in a single batch.
+     Calling without any parameters will use the default `accountAddress`.
+     - parameter addresses: An optional array of addresses, defaults to `nil`.
+     - parameter completion: Callback for the outcome of the fetch
+    */
+    public func getBalance(addresses: [String]? = nil, completion: @escaping (Result<[BalanceModel], DataResponseError>) -> Void) {
 
         let param: [URLQueryItem]
         if let addresses = addresses {
@@ -27,17 +31,17 @@ extension EtherscanClient {
             param = [URLQueryItem(name: .address, value: accountAddress)]
         }
 
-        fetchRemote(val: [Balance].self, module: .account, action: .balanceMulti, param: param, completion: completion)
+        fetchRemote(val: [BalanceModel].self, module: .account, action: .balanceMulti, param: param, completion: completion)
     }
 
     /// Get a paginated list of 'Normal' Transactions By Address
     /// [Optional Parameters] startblock: starting blockNo to retrieve results, endblock: ending blockNo to retrieve results
     /// (Returns up to a maximum of the last 10000 transactions only)
     public func getTransaction(address: String? = nil, startBlock: String? = nil,
-                        endBlock: String? = nil, page: Int? = nil, offset: Int? = nil, completion: @escaping (Result<[Transaction], DataResponseError>) -> Void) {
+                        endBlock: String? = nil, page: Int? = nil, offset: Int? = nil, completion: @escaping (Result<[TransactionModel], DataResponseError>) -> Void) {
         let urlQuery = getUrlQuery(address: address, startBlock: startBlock, endBlock: endBlock, page: page, offset: offset)
 
-        fetchRemote(val: [Transaction].self, module: .account, action: .txlist, param: urlQuery, completion: completion)
+        fetchRemote(val: [TransactionModel].self, module: .account, action: .txlist, param: urlQuery, completion: completion)
     }
 
     /// Get a list of 'Internal' Transactions
@@ -49,10 +53,10 @@ extension EtherscanClient {
                                 endBlock: String? = nil,
                                 page: Int? = nil,
                                 offset: Int? = nil,
-                                completion: @escaping (Result<[InternalBalance], DataResponseError>) -> Void) {
+                                completion: @escaping (Result<[InternalTransactionModel], DataResponseError>) -> Void) {
         let urlQuery = getUrlQuery(address: address, txHash: txHash, startBlock: startBlock, endBlock: endBlock, page: page, offset: offset)
 
-        fetchRemote(val: [InternalBalance].self, module: .account, action: .txlistinternal, param: urlQuery, completion: completion)
+        fetchRemote(val: [InternalTransactionModel].self, module: .account, action: .txlistinternal, param: urlQuery, completion: completion)
     }
 
     /// Get a list of "ERC20 - Token Transfer Events" by Address
@@ -62,20 +66,20 @@ extension EtherscanClient {
                            page: Int? = nil,
                            offset: Int? = nil,
                            contractAddress: String? = nil,
-                           completion: @escaping (Result<[Erc20Transfer], DataResponseError>) -> Void) {
+                           completion: @escaping (Result<[Erc20TransferModel], DataResponseError>) -> Void) {
         let urlQuery = getUrlQuery(address: address, startBlock: startBlock, endBlock: endBlock, page: page, offset: offset, contractAddress: contractAddress)
 
-        fetchRemote(val: [Erc20Transfer].self, module: .account, action: .tokentx, param: urlQuery, completion: completion)
+        fetchRemote(val: [Erc20TransferModel].self, module: .account, action: .tokentx, param: urlQuery, completion: completion)
     }
 
     public func getBlocksMined(address: String? = nil,
                         blockType: BlockType = .blocks,
                         page: Int? = nil,
                         offset: Int? = nil,
-                        completion: @escaping (Result<[Block], DataResponseError>) -> Void) {
+                        completion: @escaping (Result<[BlockModel], DataResponseError>) -> Void) {
         let urlQuery = getUrlQuery(address: address, blockType: blockType, page: page, offset: offset)
 
-        fetchRemote(val: [Block].self, module: .account, action: .getminedblocks, param: urlQuery, completion: completion)
+        fetchRemote(val: [BlockModel].self, module: .account, action: .getminedblocks, param: urlQuery, completion: completion)
 
     }
 

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Balance: Codable {
+public struct BalanceModel: Codable {
     let account: String
     let balance: String
 }

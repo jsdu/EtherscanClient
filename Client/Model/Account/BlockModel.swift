@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Block: Codable {
+public struct BlockModel: Codable {
     let blockNumber: Int
     let timeStamp: String
     let blockReward: String
