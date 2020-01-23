@@ -34,9 +34,15 @@ extension EtherscanClient {
         fetchRemote(val: [BalanceModel].self, module: .account, action: .balanceMulti, param: param, completion: completion)
     }
 
-    /// Get a paginated list of 'Normal' Transactions By Address
-    /// [Optional Parameters] startblock: starting blockNo to retrieve results, endblock: ending blockNo to retrieve results
-    /// (Returns up to a maximum of the last 10000 transactions only)
+    /**
+    Get a paginated list of 'Normal' Transactions By Address
+    - parameter address: Address of the transactions. Default is the initial account address
+    - parameter startBlock: Optional start block number
+    - parameter endBlock: Optional end block number
+    - parameter page: Optional page number. Use with offset. If set to nil, query will return up to 10000 transactions.
+    - parameter offset: The number of transactions per page
+    - parameter completion: Callback for the outcome of the fetch.
+    */
     public func getTransaction(address: String? = nil, startBlock: String? = nil,
                         endBlock: String? = nil, page: Int? = nil, offset: Int? = nil, completion: @escaping (Result<[TransactionModel], DataResponseError>) -> Void) {
         let urlQuery = getUrlQuery(address: address, startBlock: startBlock, endBlock: endBlock, page: page, offset: offset)
@@ -44,9 +50,16 @@ extension EtherscanClient {
         fetchRemote(val: [TransactionModel].self, module: .account, action: .txlist, param: urlQuery, completion: completion)
     }
 
-    /// Get a list of 'Internal' Transactions
-    /// Specify nil address to search for internal transactions in the instantiated account
-    /// Specify a txHash to search for internal transactions by transaction hash. It is inferred that the address is nil
+    /**
+    Get a list of 'Internal' Transactions
+    - parameter address: Address of the transactions. Default is the initial account address
+    - parameter txHash: Alternative to querying by addresses. Address must be set to nil for querying txhash
+    - parameter startBlock: Optional start block number
+    - parameter endBlock: Optional end block number
+    - parameter page: Optional page number. Use with offset. If set to nil, query will return up to 10000 transactions.
+    - parameter offset: The number of transactions per page
+    - parameter completion: Callback for the outcome of the fetch.
+    */
     public func getInternalTransaction(address: String? = nil,
                                 txHash: String? = nil,
                                 startBlock: String? = nil,
@@ -59,7 +72,15 @@ extension EtherscanClient {
         fetchRemote(val: [InternalTransactionModel].self, module: .account, action: .txlistinternal, param: urlQuery, completion: completion)
     }
 
-    /// Get a list of "ERC20 - Token Transfer Events" by Address
+    /**
+      Get a list of "ERC20 - Token Transfer Events" by Address
+      - parameter address: Address of the transfer events. Default is the initial account address
+      - parameter startBlock: Optional start block number
+      - parameter endBlock: Optional end block number
+      - parameter page: Optional page number. Use with offset. If set to nil, query will return up to 10000 transactions.
+      - parameter offset: The number of transactions per page
+      - parameter completion: Callback for the outcome of the fetch.
+      */
     public func getErc20Transfers(address: String? = nil,
                            startBlock: String? = nil,
                            endBlock: String? = nil,
@@ -72,6 +93,14 @@ extension EtherscanClient {
         fetchRemote(val: [Erc20TransferModel].self, module: .account, action: .tokentx, param: urlQuery, completion: completion)
     }
 
+    /**
+      Get list of Blocks Mined by Address
+      - parameter address: Address of the blocks. Default is the initial account address
+      - parameter blockType: Either `.blocks` or `.uncles`
+      - parameter page: Optional page number. Use with offset. If set to nil, query will return up to 10000 transactions.
+      - parameter offset: The number of transactions per page
+      - parameter completion: Callback for the outcome of the fetch.
+      */
     public func getBlocksMined(address: String? = nil,
                         blockType: BlockType = .blocks,
                         page: Int? = nil,

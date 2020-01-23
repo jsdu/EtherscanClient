@@ -7,22 +7,21 @@
 
 import Foundation
 
-/*
- The Event Log API was designed to provide an alternative to the native eth_getLogs. Below are the list of supported filter parameters:
-
- fromBlock, toBlock, address
- topic0, topic1, topic2, topic3 (32 Bytes per topic)
- topic0_1_opr (and|or between topic0 & topic1), topic1_2_opr (and|or between topic1 & topic2), topic2_3_opr (and|or between topic2 & topic3), topic0_2_opr (and|or between topic0 & topic2), topic0_3_opr (and|or between topic0 & topic3), topic1_3_opr (and|or between topic1 & topic3)
- - FromBlock & ToBlock accepts the blocknumber (integer, NOT hex) or 'latest' (earliest & pending is NOT supported yet)
- - Topic Operator (opr) choices are either 'and' or 'or' and are restricted to the above choices only
- - FromBlock & ToBlock parameters are required
- - An address and/or topic(X) parameters are required, when multiple topic(X) parameters are used the topicX_X_opr (and|or operator) is also required
- - For performance & security considerations, only the first 1000 results are return. So please narrow down the filter parameters
- */
-
 extension EtherscanClient {
 
-    // topic x and topic y are of the form {.topic0, .topic1, .topic2, .topic3 }
+    /**
+     The Event Log API was designed to provide an alternative to the native eth_getLogs.
+     For performance & security considerations, only the first 1000 results are return. So please narrow down the filter parameters
+     - parameter fromBlock: The block number as an integer or 'latest'
+     - parameter toBlock: The block number as an integer or 'latest'
+     - parameter address: Address of the event
+     - parameter topicx: `.topic0`, `. topic1`, `. topic2`, or `.topic3`
+     - parameter topicxbytes: topicx bytes (32 bytes)
+     - parameter topicOperator: Use only when including topic y. Either `.and`, `.or`
+     - parameter topicy: Use `.topic1`, `.topic2`, or `.topic3`
+     - parameter topicybytes: topicy bytes (32 bytes)
+     - parameter completion: Callback for the outcome of the fetch.
+    */
     public func getEventLog(
         fromBlock: String,
         toBlock: String,
