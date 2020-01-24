@@ -328,12 +328,12 @@
 		F0F469FA23D801AB00F3FDDE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				F0F469FB23D801AB00F3FDDE /* GasTracker.swift */,
 				F0F469FC23D801AB00F3FDDE /* Account.swift */,
+				F0F46A1623D89DA100F3FDDE /* Contract.swift */,
+				F0F469FB23D801AB00F3FDDE /* GasTracker.swift */,
 				F0F469FD23D801AB00F3FDDE /* Token.swift */,
 				F0F469FE23D801AB00F3FDDE /* TransactionStatus.swift */,
 				F0F46A1B23D8FC3700F3FDDE /* EventLog.swift */,
-				F0F46A1623D89DA100F3FDDE /* Contract.swift */,
 				F0F46A2023D97B6100F3FDDE /* Stats.swift */,
 			);
 			path = Modules;

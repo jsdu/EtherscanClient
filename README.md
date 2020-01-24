@@ -13,8 +13,6 @@ The Etherscan API Client is a swift port of the [Rest API](https://etherscan.io/
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
 
 EtherscanClient is available through [CocoaPods](https://cocoapods.org). To install
@@ -26,27 +24,25 @@ pod 'EtherscanClient'
 
 ## Author
 
-contact@dujason.com
+Feel free to email me at contact@dujason.com for any questions 
 
 ## License
 
 EtherscanClient is available under the MIT license. See the LICENSE file for more info.
 
-## Documentation
-
-### Initialization
+## Initialization
 
 The Etherscan Client must be initialized with an api key and an address of an account.
 
 ```swift
-let client = EtherscanClient(apiKey: "apiKey", accountAddress: "0x9dd134d14d1e65f84b706d6f205cd5b1cd03a46b")
+let client = EtherscanClient(apiKey: "XXXXXXXXXXXXXXXXXX", accountAddress: "0x9dd134d14d1e65f84b706d6f205cd5b1cd03a46b")
 ```
 
-### Account
+## Account
 
 The following calls are part of Etherscan's [Account Module](https://etherscan.io/apis#accounts)
 
-#### Get Ether Balance for the initial account's address
+### Get Ether Balance for the initial account's address
 
 ```swift
 client.getBalance() { result in
@@ -59,7 +55,7 @@ client.getBalance() { result in
 }
 ```
 
-#### Get Ether balance for multiple addresses in a single call
+### Get Ether balance for multiple addresses in a single call
 
 ```swift
 let addresses = ["0xddbd2b932c763ba5b1b7ae3b362eac3e8d40121a", 
@@ -75,7 +71,7 @@ client.getBalance(addresses: addresses) { result in
 }
 ```
 
-#### Get a list of 'Normal' Transactions for the initial account
+### Get a list of 'Normal' Transactions for the initial account
 ```swift
 client.getTransaction() { result in
     switch result {
@@ -87,7 +83,7 @@ client.getTransaction() { result in
 }
 ```
 
-#### Get a list of 'Normal' Transactions for an address
+### Get a list of 'Normal' Transactions for an address
 ```swift
 client.getTransaction(address: "0x9dd134d14d1e65f84b706d6f205cd5b1cd03a46b") { result in
     switch result {
@@ -99,7 +95,7 @@ client.getTransaction(address: "0x9dd134d14d1e65f84b706d6f205cd5b1cd03a46b") { r
 }
 ```
 
-#### Get a filtered list of 'Normal' Transactions based on start and end block
+### Get a filtered list of 'Normal' Transactions based on start and end block
 ```swift
 client.getTransaction(startBlock: "0", endBlock: "99999999") { result in
     switch result {
@@ -111,7 +107,7 @@ client.getTransaction(startBlock: "0", endBlock: "99999999") { result in
 }
 ```
 
-#### Get a paginated list of 'Normal' Transactions
+### Get a paginated list of 'Normal' Transactions
 ```swift
 client.getTransaction(page: "1", offset: "10") { result in
     switch result {
@@ -123,8 +119,8 @@ client.getTransaction(page: "1", offset: "10") { result in
 }
 ```
 
-#### Get a list of 'Internal' Transactions for an address 
-NOTE: The same queries can be applied for normal transactions and internal transactions.
+### Get a list of 'Internal' Transactions for an address 
+**Note**: The same queries can be applied for normal transactions and internal transactions.
 This includes `address`, `startBlock`, `endBlock`, `page`, and `offset`
 ```swift
 client.getInternalTransaction() { result in
@@ -137,9 +133,88 @@ client.getInternalTransaction() { result in
 }
 ```
 
-#### Get a list of 'Internal' Transactions by transaction hash
+### Get a list of 'Internal' Transactions by transaction hash
 ```swift
 client.getInternalTransaction(txhash: "0x40eb908387324f2b575b4879cd9d7188f69c8fc9d87c901b9e2daaea4b442170") { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+  
+  ### Get a list of "ERC20 - Token Transfer Events" by Address
+  **Note**: The following queries are available `address`, `startBlock`, `endBlock`, `page`, and `offset`
+  ```swift
+  client.getErc20Transfers() { result in
+      switch result {
+      case .success(let result):
+          print(result)
+      case .failure(let error):
+          print(error)
+      }
+  }
+  ```
+  
+  ### Get a list of "ERC20 - Token Transfer Events" by Transaction Hash
+  ```swift
+  client.getErc20Transfers(contractAddress: "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2") { result in
+      switch result {
+      case .success(let result):
+          print(result)
+      case .failure(let error):
+          print(error)
+      }
+  }
+  ```
+
+### Get list of Blocks Mined by Address
+**Note**: The following queries are available `address`, `page`, and `offset`
+```swift
+client.getBlocksMined() { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+
+### Get list of Blocks Mined by Address by blockType 
+Blocktype is either `.blocks`, or `.uncles`, by default, it is `.blocks`
+```swift
+client.getBlocksMined(blockType: .uncles) { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+
+## Contract
+
+The following calls are part of Etherscan's [Contract Module](https://etherscan.io/apis#contracts)
+
+###  Get Contract ABI for Verified Contract Source Codes
+```swift
+client.getContractABI(address: "0xBB9bc244D798123fDe783fCc1C72d3Bb8C189413") { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+
+###   Get Contract Source Code for Verified Contract Source Codes
+```swift
+client.getSourceCode(address: "0xBB9bc244D798123fDe783fCc1C72d3Bb8C189413") { result in
     switch result {
     case .success(let result):
         print(result)
