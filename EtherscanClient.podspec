@@ -5,9 +5,9 @@ Pod::Spec.new do |spec|
   spec.description  = <<-DESC
     EtherscanClient is a clean and well written client for the Etherscan API.
                    DESC
-  spec.homepage     = "http://dujason.com"
+  spec.homepage     = "https://dujason.com"
   spec.license      = { :type => "MIT", :file => 'LICENSE' }
-  spec.author       = { "Jason Du" => "contact@dujason.ca" }
+  spec.author       = { 'Jason Du' => 'contact@dujason.com' }
   spec.source       = { :git => "https://github.com/jsdu/EtherscanClient.git", :tag => "#{spec.version}" }
   spec.source_files = "Client/**/*.{swift}"
   spec.swift_version = "5.0"
