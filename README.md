@@ -295,10 +295,44 @@ client.getBlockNo(timestamp: "1578638524", closest: .before) { result in
 ##  Event Logs
 The Event Log API was designed to provide an alternative to the native eth_getLogs.
 For performance & security considerations, only the first 1000 results are return. So please narrow down the filter parameters
+- parameter fromBlock: The block number as an integer or 'latest'
+- parameter toBlock: The block number as an integer or 'latest'
+- parameter address: Address of the event
+- parameter topicx: `.topic0`, `. topic1`, `. topic2`, or `.topic3`
+- parameter topicxbytes: topicx bytes (32 bytes)
+- parameter topicOperator: Use only when including topic y. Either `.and`, `.or`
+- parameter topicy: Use `.topic1`, `.topic2`, or `.topic3`
+- parameter topicybytes: topicy bytes (32 bytes)
 
+### Sample Queries 
+```swift
+client.getEventLog(fromBlock: "379224", toBlock: "latest", address: "0x33990122638b9132ca29c723bdf037f1a891a70c", topicx: .topic0, topicxbytes: "0xf63780e752c6a54a94fc52715dbc5518a3b4c3c2833d301a204226548a2a8545") { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+
+### Sample Queries
+```swift
+client.getEventLog(fromBlock: "379224", toBlock: "latest", address: "0x33990122638b9132ca29c723bdf037f1a891a70c", topicx: .topic0, topicxbytes: "0xf63780e752c6a54a94fc52715dbc5518a3b4c3c2833d301a204226548a2a8545", topicOperator: .and, topicy: .topic1, topicybytes: "0x72657075746174696f6e00000000000000000000000000000000000000000000") { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
 
 ## Todo
 
 ### Proxy module 
 The [Proxy module](https://etherscan.io/apis#proxy) is a limited set of APIs for Geth
 Currently, data that is being returned from the Proxy module is all hex encoded. 
+
+### List of verified contract addresses and names
+Etherscan published a csv list https://etherscan.io/exportData?type=open-source-contract-codes
