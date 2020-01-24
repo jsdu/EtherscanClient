@@ -42,7 +42,10 @@ let client = EtherscanClient(apiKey: "XXXXXXXXXXXXXXXXXX", accountAddress: "0x9d
 
 The following calls are part of Etherscan's [Account Module](https://etherscan.io/apis#accounts)
 
-### Get Ether Balance for the initial account's address
+### Get Ether Balance
+Up to a maxium of 20 accounts in a single batch.
+Calling without any parameters will use get the balance of the default `accountAddress`.
+`addresses`: An optional array of addresses, defaults to `nil`.
 
 ```swift
 client.getBalance() { result in
@@ -53,14 +56,11 @@ client.getBalance() { result in
         print(error)
     }
 }
-```
 
-### Get Ether balance for multiple addresses in a single call
-
-```swift
 let addresses = ["0xddbd2b932c763ba5b1b7ae3b362eac3e8d40121a", 
                  "0x63a9975ba31b0b9626b34300f7f627147df1f526",
                  "0x198ef1ec325a96cc354c7266a038be8b5c558f67"]
+                 
 client.getBalance(addresses: addresses) { result in
     switch result {
     case .success(let result):
@@ -71,8 +71,14 @@ client.getBalance(addresses: addresses) { result in
 }
 ```
 
-### Get a list of 'Normal' Transactions for the initial account
+### Get 'Normal' Transactions
+- `address`: Address of the transactions. Default is the initial account address
+- `startBlock`: Optional start block number
+- `endBlock`: Optional end block number
+- `page`: Optional page number. Use with offset. If set to nil, query will return up to 10000 transactions.
+- `offset`: The number of transactions per page
 ```swift
+/// Gets a list of normal transactions from the default account
 client.getTransaction() { result in
     switch result {
     case .success(let result):
@@ -81,10 +87,8 @@ client.getTransaction() { result in
         print(error)
     }
 }
-```
 
-### Get a list of 'Normal' Transactions for an address
-```swift
+/// Gets a list of normal transactions from an address
 client.getTransaction(address: "0x9dd134d14d1e65f84b706d6f205cd5b1cd03a46b") { result in
     switch result {
     case .success(let result):
@@ -293,16 +297,19 @@ client.getBlockNo(timestamp: "1578638524", closest: .before) { result in
 }
 ```
 ##  Event Logs
+
+The following calls are part of Etherscan's [Events Module](https://etherscan.io/apis#logs)
+
 The Event Log API was designed to provide an alternative to the native eth_getLogs.
 For performance & security considerations, only the first 1000 results are return. So please narrow down the filter parameters
-- parameter fromBlock: The block number as an integer or 'latest'
-- parameter toBlock: The block number as an integer or 'latest'
-- parameter address: Address of the event
-- parameter topicx: `.topic0`, `. topic1`, `. topic2`, or `.topic3`
-- parameter topicxbytes: topicx bytes (32 bytes)
-- parameter topicOperator: Use only when including topic y. Either `.and`, `.or`
-- parameter topicy: Use `.topic1`, `.topic2`, or `.topic3`
-- parameter topicybytes: topicy bytes (32 bytes)
+- `fromBlock`: The block number as an integer or 'latest'
+- `toBlock`: The block number as an integer or 'latest'
+- `address`: Address of the event
+- `topicx`: `.topic0`, `. topic1`, `. topic2`, or `.topic3`
+- `topicxbytes`: topicx bytes (32 bytes)
+- `topicOperator`: Use only when including topic y. Either `.and`, `.or`
+- `topicy`: Use `.topic1`, `.topic2`, or `.topic3`
+- `topicybytes`: topicy bytes (32 bytes)
 
 ### Sample Queries 
 ```swift
@@ -327,6 +334,57 @@ client.getEventLog(fromBlock: "379224", toBlock: "latest", address: "0x339901226
     }
 }
 ```
+
+## Token
+The following calls are part of Etherscan's [Tokens Module](https://etherscan.io/apis#tokens)
+
+
+### Get ERC20-Token TotalSupply by ContractAddress
+`contractAddress`: Address of the ERC20 Token
+
+```swift
+client.getErc20TotalSupply(contractAddress: "0x57d90b64a1a57749b0f932f1a3395792e12e7055") { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+
+### Get ERC20-Token Account Balance for TokenContractAddress
+`contractAddress`: Address of the ERC20 Token
+`address`: Address of the account
+```swift
+client.getErc20AccountBalance(contractAddress: "0x57d90b64a1a57749b0f932f1a3395792e12e7055", address: "0xe04f27eb70e025b78871a2ad7eabe85e61212761") { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+
+    /**
+     Get Estimation of Confirmation Time
+     - parameter gasPrice: The gas price in wei
+     - parameter completion: The callback which will return the estimated time in seconds
+    */
+    public func getGasEstimationTime(gasPrice: String, completion: @escaping (Result<String, DataResponseError>) -> Void) {
+        let urlQuery = [URLQueryItem(name: .gasprice, value: gasPrice)]
+        fetchRemote(val: String.self, module: .gastracker, action: .gasestimate, param: urlQuery, completion: completion)
+    }
+
+    /**
+     Get Gas Oracle returns a GasModel
+     - parameter completion: Callback for the outcome of the fetch.
+    */
+    public func getGasOracle(completion: @escaping (Result<GasModel, DataResponseError>) -> Void) {
+        fetchRemote(val: GasModel.self, module: .gastracker, action: .gasoracle, param: [], completion: completion)
+    }
+}
 
 ## Todo
 

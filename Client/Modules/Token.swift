@@ -13,7 +13,7 @@ extension EtherscanClient {
 
     /**
      Get ERC20-Token TotalSupply by ContractAddress
-    - parameter contractAddress: Transaction hash
+    - parameter contractAddress: Address of the token contract
     - parameter completion: Callback for the outcome of the fetch.
     */
     public func getErc20TotalSupply(contractAddress: String, completion: @escaping (Result<String, DataResponseError>) -> Void) {
@@ -29,7 +29,7 @@ extension EtherscanClient {
     */
     public func getErc20AccountBalance(contractAddress: String, address: String, completion: @escaping (Result<String, DataResponseError>) -> Void) {
         let urlQuery = getUrlQuery(contractAddress: contractAddress, address: address)
-           fetchRemote(val: String.self, module: .account, action: .tokenbalance, param: urlQuery, completion: completion)
+        fetchRemote(val: String.self, module: .account, action: .tokenbalance, param: urlQuery, completion: completion)
     }
 
     private func getUrlQuery(contractAddress: String, address: String? = nil) -> [URLQueryItem] {
