@@ -71,12 +71,12 @@ client.getBalance(addresses: addresses) { result in
 }
 ```
 
-### Get 'Normal' Transactions
-- `address`: Address of the transactions. Default is the initial account address
+### Get a list of 'Normal' Transactions
+- `address`: Optional Address of the transactions. Default is the initial account address
 - `startBlock`: Optional start block number
 - `endBlock`: Optional end block number
 - `page`: Optional page number. Use with offset. If set to nil, query will return up to 10000 transactions.
-- `offset`: The number of transactions per page
+- `offset`: Optional offset. The number of transactions per page
 ```swift
 /// Gets a list of normal transactions from the default account
 client.getTransaction() { result in
@@ -97,10 +97,8 @@ client.getTransaction(address: "0x9dd134d14d1e65f84b706d6f205cd5b1cd03a46b") { r
         print(error)
     }
 }
-```
 
-### Get a filtered list of 'Normal' Transactions based on start and end block
-```swift
+/// Get a filtered list of normal Transactions based on start and end block
 client.getTransaction(startBlock: "0", endBlock: "99999999") { result in
     switch result {
     case .success(let result):
@@ -109,10 +107,8 @@ client.getTransaction(startBlock: "0", endBlock: "99999999") { result in
         print(error)
     }
 }
-```
 
-### Get a paginated list of 'Normal' Transactions
-```swift
+/// Get a paginated list of normal Transactions
 client.getTransaction(page: "1", offset: "10") { result in
     switch result {
     case .success(let result):
@@ -123,10 +119,15 @@ client.getTransaction(page: "1", offset: "10") { result in
 }
 ```
 
-### Get a list of 'Internal' Transactions for an address 
-**Note**: The same queries can be applied for normal transactions and internal transactions.
-This includes `address`, `startBlock`, `endBlock`, `page`, and `offset`
+### Get a list of 'Internal' Transactions 
+- `address`: Address of the transactions. Default is the initial account address
+- `txHash`: Alternative to querying by addresses. Address must be set to nil for querying txhash
+- `startBlock`: Optional start block number
+- `endBlock`: Optional end block number
+- `page`: Optional page number. Use with offset. If set to nil, query will return up to 10000 transactions.
+- `offset`:  Optional offset. The number of transactions per page
 ```swift
+/// Gets a list of internal transactions from the default account 
 client.getInternalTransaction() { result in
     switch result {
     case .success(let result):
@@ -135,10 +136,8 @@ client.getInternalTransaction() { result in
         print(error)
     }
 }
-```
 
-### Get a list of 'Internal' Transactions by transaction hash
-```swift
+/// Get a list of internal transactions by transaction hash
 client.getInternalTransaction(txhash: "0x40eb908387324f2b575b4879cd9d7188f69c8fc9d87c901b9e2daaea4b442170") { result in
     switch result {
     case .success(let result):
@@ -150,8 +149,14 @@ client.getInternalTransaction(txhash: "0x40eb908387324f2b575b4879cd9d7188f69c8fc
 ```
   
   ### Get a list of "ERC20 - Token Transfer Events" by Address
-  **Note**: The following queries are available `address`, `startBlock`, `endBlock`, `page`, and `offset`
+  - `address`: Address of the transfer events. Default is the initial account address
+  - `startBlock`: Optional start block number
+  - `endBlock`: Optional end block number
+  - `page`: Optional page number. Use with offset. If set to nil, query will return up to 10000 transactions.
+  - `offset`: Optional offset. The number of transactions per page
+  - `contractAddress`: The contract address of the ERC20 contract
   ```swift
+  /// Get a list of all ERC20 token transfers from the default account
   client.getErc20Transfers() { result in
       switch result {
       case .success(let result):
@@ -160,10 +165,8 @@ client.getInternalTransaction(txhash: "0x40eb908387324f2b575b4879cd9d7188f69c8fc
           print(error)
       }
   }
-  ```
   
-  ### Get a list of "ERC20 - Token Transfer Events" by Transaction Hash
-  ```swift
+  /// Get a list of ERC20 transfers from a specific ERC20 token
   client.getErc20Transfers(contractAddress: "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2") { result in
       switch result {
       case .success(let result):
@@ -175,7 +178,10 @@ client.getInternalTransaction(txhash: "0x40eb908387324f2b575b4879cd9d7188f69c8fc
   ```
 
 ### Get list of Blocks Mined by Address
-**Note**: The following queries are available `address`, `page`, and `offset`
+- `address`: Address of the blocks. Default is the initial account address
+- `blockType`: Either `.blocks` or `.uncles`. By default, it's `.blocks`
+- `page`: Optional page number. Use with offset. If set to nil, query will return up to 10000 transactions.
+- `offset`: The number of transactions per page
 ```swift
 client.getBlocksMined() { result in
     switch result {
@@ -185,11 +191,8 @@ client.getBlocksMined() { result in
         print(error)
     }
 }
-```
 
-### Get list of Blocks Mined by Address by blockType 
-Blocktype is either `.blocks`, or `.uncles`, by default, it is `.blocks`
-```swift
+/// Getting uncle blocks mined
 client.getBlocksMined(blockType: .uncles) { result in
     switch result {
     case .success(let result):
@@ -205,6 +208,7 @@ client.getBlocksMined(blockType: .uncles) { result in
 The following calls are part of Etherscan's [Contract Module](https://etherscan.io/apis#contracts)
 
 ###  Get Contract ABI for Verified Contract Source Codes
+- `address`: Address of the contract
 ```swift
 client.getContractABI(address: "0xBB9bc244D798123fDe783fCc1C72d3Bb8C189413") { result in
     switch result {
@@ -217,6 +221,7 @@ client.getContractABI(address: "0xBB9bc244D798123fDe783fCc1C72d3Bb8C189413") { r
 ```
 
 ###   Get Contract Source Code for Verified Contract Source Codes
+- `address`: Address of the contract
 ```swift
 client.getSourceCode(address: "0xBB9bc244D798123fDe783fCc1C72d3Bb8C189413") { result in
     switch result {
@@ -233,6 +238,7 @@ client.getSourceCode(address: "0xBB9bc244D798123fDe783fCc1C72d3Bb8C189413") { re
 The following calls are part of Etherscan's [Transaction Module](https://etherscan.io/apis#transactions)
 
 ### Check Contract Execution Status (if there was an error during contract execution)
+- `txHash`: Transaction hash
 ```swift
 client.checkContractExecutionStatus(txHash: "0x15f8e5ea1079d9a0bb04a4c58ae5fe7654b5b2b4463375ff7ffb490aa0032f3a") { result in
     switch result {
@@ -245,6 +251,7 @@ client.checkContractExecutionStatus(txHash: "0x15f8e5ea1079d9a0bb04a4c58ae5fe765
 ```
 
 ### Check Transaction Receipt Status (Only applicable for Post Byzantium fork transactions)
+- `txHash`: Transaction hash
 ```swift
 client.checkContractExecutionStatus(txHash: "0x15f8e5ea1079d9a0bb04a4c58ae5fe7654b5b2b4463375ff7ffb490aa0032f3a") { result in
     switch result {
@@ -261,6 +268,7 @@ client.checkContractExecutionStatus(txHash: "0x15f8e5ea1079d9a0bb04a4c58ae5fe765
 The following calls are part of Etherscan's [Blocks Module](https://etherscan.io/apis#blocks)
 
 ### Get Block And Uncle Rewards by BlockNo
+- `blockno`: Block Number
 ```swift
 client.getBlockReward(blockno: "2165403") { result in
     switch result {
@@ -273,6 +281,7 @@ client.getBlockReward(blockno: "2165403") { result in
 ```
 
 ###  Get Estimated Block Countdown Time by BlockNo
+- `blockno`: Block Number
 ```swift
 client.getBlockCountDown(blockno: "16100000") { result in
     switch result {
@@ -285,7 +294,8 @@ client.getBlockCountDown(blockno: "16100000") { result in
 ```
 
 ###  Get Block Number by Timestamp
-'closest' can either be `.before`, or `.after`
+- `timestamp`: Unix timestamp in seconds
+- `closest`: Either `.before` or `.after`
 ```swift
 client.getBlockNo(timestamp: "1578638524", closest: .before) { result in
     switch result {
@@ -300,8 +310,9 @@ client.getBlockNo(timestamp: "1578638524", closest: .before) { result in
 
 The following calls are part of Etherscan's [Events Module](https://etherscan.io/apis#logs)
 
+### Get Event Logs
 The Event Log API was designed to provide an alternative to the native eth_getLogs.
-For performance & security considerations, only the first 1000 results are return. So please narrow down the filter parameters
+For performance & security considerations, only the first 1000 results are return. Please narrow down the filter parameters
 - `fromBlock`: The block number as an integer or 'latest'
 - `toBlock`: The block number as an integer or 'latest'
 - `address`: Address of the event
@@ -310,8 +321,6 @@ For performance & security considerations, only the first 1000 results are retur
 - `topicOperator`: Use only when including topic y. Either `.and`, `.or`
 - `topicy`: Use `.topic1`, `.topic2`, or `.topic3`
 - `topicybytes`: topicy bytes (32 bytes)
-
-### Sample Queries 
 ```swift
 client.getEventLog(fromBlock: "379224", toBlock: "latest", address: "0x33990122638b9132ca29c723bdf037f1a891a70c", topicx: .topic0, topicxbytes: "0xf63780e752c6a54a94fc52715dbc5518a3b4c3c2833d301a204226548a2a8545") { result in
     switch result {
@@ -321,10 +330,7 @@ client.getEventLog(fromBlock: "379224", toBlock: "latest", address: "0x339901226
         print(error)
     }
 }
-```
 
-### Sample Queries
-```swift
 client.getEventLog(fromBlock: "379224", toBlock: "latest", address: "0x33990122638b9132ca29c723bdf037f1a891a70c", topicx: .topic0, topicxbytes: "0xf63780e752c6a54a94fc52715dbc5518a3b4c3c2833d301a204226548a2a8545", topicOperator: .and, topicy: .topic1, topicybytes: "0x72657075746174696f6e00000000000000000000000000000000000000000000") { result in
     switch result {
     case .success(let result):
@@ -341,7 +347,6 @@ The following calls are part of Etherscan's [Tokens Module](https://etherscan.io
 
 ### Get ERC20-Token TotalSupply by ContractAddress
 `contractAddress`: Address of the ERC20 Token
-
 ```swift
 client.getErc20TotalSupply(contractAddress: "0x57d90b64a1a57749b0f932f1a3395792e12e7055") { result in
     switch result {
@@ -367,24 +372,83 @@ client.getErc20AccountBalance(contractAddress: "0x57d90b64a1a57749b0f932f1a33957
 }
 ```
 
-    /**
-     Get Estimation of Confirmation Time
-     - parameter gasPrice: The gas price in wei
-     - parameter completion: The callback which will return the estimated time in seconds
-    */
-    public func getGasEstimationTime(gasPrice: String, completion: @escaping (Result<String, DataResponseError>) -> Void) {
-        let urlQuery = [URLQueryItem(name: .gasprice, value: gasPrice)]
-        fetchRemote(val: String.self, module: .gastracker, action: .gasestimate, param: urlQuery, completion: completion)
-    }
+## Gas Tracker
 
-    /**
-     Get Gas Oracle returns a GasModel
-     - parameter completion: Callback for the outcome of the fetch.
-    */
-    public func getGasOracle(completion: @escaping (Result<GasModel, DataResponseError>) -> Void) {
-        fetchRemote(val: GasModel.self, module: .gastracker, action: .gasoracle, param: [], completion: completion)
+### Get Estimation of Confirmation Time
+- `gasPrice`: The gas price in wei
+```swift
+client.getGasEstimationTime(gasPrice: "2000000000") { result in 
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
     }
 }
+```
+
+### Get gas oracle
+```swift
+client.getGasOracle { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+## Stats
+
+The following calls are part of Etherscan's [Stats Module](https://etherscan.io/apis#stats)
+
+### Get Total Supply of Ether
+```swift
+client.getTotalEthSupply { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+### Get Ether Last Price in BTC and USD
+```swift
+client.getEthLastPrice { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+
+### Get Ethereum Nodes Size
+- `startDate`: Start date must be in the form 'yyyy-MM-dd'
+- `endDate`: End date must be in the form 'yyyy-MM-dd'
+- `clientType`: Either .geth or .parity
+- `isArchived`: Optional Flag to set if syncmode is archived or default
+```swift
+client.getEthNodeSize(startDate: "2019-02-01", endDate: "2019-02-28", clientType: .geth) { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+
+client.getEthNodeSize(startDate: "2019-02-01", endDate: "2019-02-28", clientType: .geth, isArchived: true) { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
 
 ## Todo
 

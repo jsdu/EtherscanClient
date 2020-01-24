@@ -40,7 +40,7 @@ extension EtherscanClient {
     - parameter startBlock: Optional start block number
     - parameter endBlock: Optional end block number
     - parameter page: Optional page number. Use with offset. If set to nil, query will return up to 10000 transactions.
-    - parameter offset: The number of transactions per page
+    - parameter offset: Optional offset. The number of transactions per page
     - parameter completion: Callback for the outcome of the fetch.
     */
     public func getTransaction(address: String? = nil, startBlock: String? = nil,
@@ -57,7 +57,7 @@ extension EtherscanClient {
     - parameter startBlock: Optional start block number
     - parameter endBlock: Optional end block number
     - parameter page: Optional page number. Use with offset. If set to nil, query will return up to 10000 transactions.
-    - parameter offset: The number of transactions per page
+    - parameter offset: Optional offset. The number of transactions per page
     - parameter completion: Callback for the outcome of the fetch.
     */
     public func getInternalTransaction(address: String? = nil,
@@ -78,7 +78,7 @@ extension EtherscanClient {
       - parameter startBlock: Optional start block number
       - parameter endBlock: Optional end block number
       - parameter page: Optional page number. Use with offset. If set to nil, query will return up to 10000 transactions.
-      - parameter offset: The number of transactions per page
+      - parameter offset: Optional offset. The number of transactions per page
       - parameter contractAddress: The contract address of the ERC20 contract
       - parameter completion: Callback for the outcome of the fetch.
       */
