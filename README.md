@@ -76,8 +76,6 @@ client.getBalance(addresses: addresses) { result in
 ```
 
 #### Get a list of 'Normal' Transactions for the initial account
-getTransaction(address: String? = nil, startBlock: String? = nil,
-endBlock: String? = nil, page: Int? = nil, offset: Int? = nil,
 ```swift
 client.getTransaction() { result in
     switch result {
@@ -125,9 +123,23 @@ client.getTransaction(page: "1", offset: "10") { result in
 }
 ```
 
-#### Similarily you can make the same queries to fetch 'Internal' Transactions
-```
+#### Get a list of 'Internal' Transactions for an address 
+NOTE: The same queries can be applied for normal transactions and internal transactions.
+This includes `address`, `startBlock`, `endBlock`, `page`, and `offset`
+```swift
 client.getInternalTransaction() { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+
+#### Get a list of 'Internal' Transactions by transaction hash
+```swift
+client.getInternalTransaction(txhash: "0x40eb908387324f2b575b4879cd9d7188f69c8fc9d87c901b9e2daaea4b442170") { result in
     switch result {
     case .success(let result):
         print(result)
