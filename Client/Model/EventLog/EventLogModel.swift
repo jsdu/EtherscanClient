@@ -2,7 +2,7 @@
 //  Log.swift
 //  EtherscanClient
 //
-//  Created by Jing Song Du on 2020-01-22.
+//  Created by Jason Du on 2020-01-22.
 //
 
 import Foundation

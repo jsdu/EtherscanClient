@@ -2,7 +2,7 @@
 //  NodeSizeModel.swift
 //  EtherscanClient
 //
-//  Created by Jing Song Du on 2020-01-23.
+//  Created by Jason Du on 2020-01-23.
 //
 
 import Foundation
