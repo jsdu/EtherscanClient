@@ -30,25 +30,42 @@ class ViewController: UITableViewController {
 
         // Do any additional setup after loading the view.
         let client = EtherscanClient(apiKey: apiKey, accountAddress: "0x9dd134d14d1e65f84b706d6f205cd5b1cd03a46b")
+//        client.getBlockCountDown(blockno: "16100000") { result in
+//            switch result {
+//            case .success(let result):
+//                print(result)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
 
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
-//        client.getGasEstimationTime(gasPrice: "2000000000") { result in
-//            switch result {
-//            case .success(let result):
-//                print(result)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-//
-//        client.getGasOracle { result in
-//            switch result {
-//            case .success(let result):
-//                print(result)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
+        //        client.getBlockReward(blockno: "2165403") { result in
+        //            switch result {
+        //            case .success(let result):
+        //                print(result)
+        //            case .failure(let error):
+        //                print(error)
+        //            }
+        //        }
+        //        client.getGasEstimationTime(gasPrice: "2000000000") { result in
+        //            switch result {
+        //            case .success(let result):
+        //                print(result)
+        //            case .failure(let error):
+        //                print(error)
+        //            }
+        //        }
+        //
+        //        client.getGasOracle { result in
+        //            switch result {
+        //            case .success(let result):
+        //                print(result)
+        //            case .failure(let error):
+        //                print(error)
+        //            }
+        //        }
 
         //        client.getEventLog(fromBlock: "379224", toBlock: "latest", address: "0x33990122638b9132ca29c723bdf037f1a891a70c", topicx: .topic0, topicxbytes: "0xf63780e752c6a54a94fc52715dbc5518a3b4c3c2833d301a204226548a2a8545") { result in
         //            switch result {
@@ -75,14 +92,14 @@ class ViewController: UITableViewController {
         //            }
         //        }
 
-//        client.getEthLastPrice { result in
-//            switch result {
-//            case .success(let result):
-//                print(result)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
+        //        client.getEthLastPrice { result in
+        //            switch result {
+        //            case .success(let result):
+        //                print(result)
+        //            case .failure(let error):
+        //                print(error)
+        //            }
+        //        }
 
         //        client.contract.getContractABI(address: "0xBB9bc244D798123fDe783fCc1C72d3Bb8C189413") { result in
         //            switch result {

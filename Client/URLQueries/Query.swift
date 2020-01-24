@@ -15,6 +15,7 @@ enum Module: String {
     case gastracker
     case contract
     case logs
+    case block
 }
 
 enum Action: String {
@@ -50,6 +51,11 @@ enum Action: String {
     case ethsupply
     case ethprice
     case chainsize
+
+    // Block
+    case getblockreward
+    case getblockcountdown
+    case getblocknobytime
 }
 
 public enum Query: String {
@@ -88,6 +94,15 @@ public enum Query: String {
     case enddate
     case clienttype
     case syncmode
+
+    case blockno
+    case timestamp
+    case closest
+}
+
+public enum Closest: String {
+    case before
+    case after
 }
 
 public enum ClientType: String {

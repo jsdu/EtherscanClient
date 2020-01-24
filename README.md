@@ -223,3 +223,82 @@ client.getSourceCode(address: "0xBB9bc244D798123fDe783fCc1C72d3Bb8C189413") { re
     }
 }
 ```
+
+## Transactions
+
+The following calls are part of Etherscan's [Transaction Module](https://etherscan.io/apis#transactions)
+
+### Check Contract Execution Status (if there was an error during contract execution)
+```swift
+client.checkContractExecutionStatus(txHash: "0x15f8e5ea1079d9a0bb04a4c58ae5fe7654b5b2b4463375ff7ffb490aa0032f3a") { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+
+### Check Transaction Receipt Status (Only applicable for Post Byzantium fork transactions)
+```swift
+client.checkContractExecutionStatus(txHash: "0x15f8e5ea1079d9a0bb04a4c58ae5fe7654b5b2b4463375ff7ffb490aa0032f3a") { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+
+##  Blocks
+
+The following calls are part of Etherscan's [Blocks Module](https://etherscan.io/apis#blocks)
+
+### Get Block And Uncle Rewards by BlockNo
+```swift
+client.getBlockReward(blockno: "2165403") { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+
+###  Get Estimated Block Countdown Time by BlockNo
+```swift
+client.getBlockCountDown(blockno: "16100000") { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+
+###  Get Block Number by Timestamp
+'closest' can either be `.before`, or `.after`
+```swift
+client.getBlockNo(timestamp: "1578638524", closest: .before) { result in
+    switch result {
+    case .success(let result):
+        print(result)
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+##  Event Logs
+The Event Log API was designed to provide an alternative to the native eth_getLogs.
+For performance & security considerations, only the first 1000 results are return. So please narrow down the filter parameters
+
+
+## Todo
+
+### Proxy module 
+The [Proxy module](https://etherscan.io/apis#proxy) is a limited set of APIs for Geth
+Currently, data that is being returned from the Proxy module is all hex encoded. 

@@ -36,6 +36,9 @@
 		F0F46A2123D97B6100F3FDDE /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A2023D97B6100F3FDDE /* Stats.swift */; };
 		F0F46A2323D97D0500F3FDDE /* NodeSizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A2223D97D0500F3FDDE /* NodeSizeModel.swift */; };
 		F0F46A2623D983B000F3FDDE /* EthPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A2523D983B000F3FDDE /* EthPrice.swift */; };
+		F0F46A2E23DAA7B700F3FDDE /* Blocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A2D23DAA7B700F3FDDE /* Blocks.swift */; };
+		F0F46A3023DAAB5000F3FDDE /* CountdownBlockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A2F23DAAB5000F3FDDE /* CountdownBlockModel.swift */; };
+		F0F46A3323DAAC0000F3FDDE /* BlockRewardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A3223DAAC0000F3FDDE /* BlockRewardModel.swift */; };
 		F7C8BA13AB5A221153ED0F6AD69E09CC /* Pods-EtherscanClient_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D21320902B1CE633FD177E786DB4267 /* Pods-EtherscanClient_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F876DD665763484A468D49AF0F40C7F6 /* Pods-EtherscanClient_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6106CF2E8CCEA9010B1082D4888191 /* Pods-EtherscanClient_Tests-dummy.m */; };
 /* End PBXBuildFile section */
@@ -108,6 +111,9 @@
 		F0F46A2023D97B6100F3FDDE /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		F0F46A2223D97D0500F3FDDE /* NodeSizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeSizeModel.swift; sourceTree = "<group>"; };
 		F0F46A2523D983B000F3FDDE /* EthPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthPrice.swift; sourceTree = "<group>"; };
+		F0F46A2D23DAA7B700F3FDDE /* Blocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blocks.swift; sourceTree = "<group>"; };
+		F0F46A2F23DAAB5000F3FDDE /* CountdownBlockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownBlockModel.swift; sourceTree = "<group>"; };
+		F0F46A3223DAAC0000F3FDDE /* BlockRewardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockRewardModel.swift; sourceTree = "<group>"; };
 		F2D7D72A5FE74A48F277C81047438CEF /* Pods-EtherscanClient_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EtherscanClient_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FD7819936836E083BE2EB3E8E4DB418E /* Pods-EtherscanClient_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EtherscanClient_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FE144E241FF24FF0146419547717FDBF /* Pods-EtherscanClient_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EtherscanClient_Example.modulemap"; sourceTree = "<group>"; };
@@ -279,6 +285,7 @@
 			children = (
 				F0F469F023D801AB00F3FDDE /* ESResult.swift */,
 				F0F469F123D801AB00F3FDDE /* Utility.swift */,
+				F0F46A3123DAAB5400F3FDDE /* Block */,
 				F0F46A2423D97E4700F3FDDE /* Stats */,
 				F0F46A1F23D91A0F00F3FDDE /* EventLog */,
 				F0F469EC23D801AB00F3FDDE /* Transaction */,
@@ -330,10 +337,11 @@
 			children = (
 				F0F469FC23D801AB00F3FDDE /* Account.swift */,
 				F0F46A1623D89DA100F3FDDE /* Contract.swift */,
-				F0F469FB23D801AB00F3FDDE /* GasTracker.swift */,
-				F0F469FD23D801AB00F3FDDE /* Token.swift */,
 				F0F469FE23D801AB00F3FDDE /* TransactionStatus.swift */,
+				F0F46A2D23DAA7B700F3FDDE /* Blocks.swift */,
 				F0F46A1B23D8FC3700F3FDDE /* EventLog.swift */,
+				F0F469FD23D801AB00F3FDDE /* Token.swift */,
+				F0F469FB23D801AB00F3FDDE /* GasTracker.swift */,
 				F0F46A2023D97B6100F3FDDE /* Stats.swift */,
 			);
 			path = Modules;
@@ -362,6 +370,15 @@
 				F0F46A2523D983B000F3FDDE /* EthPrice.swift */,
 			);
 			path = Stats;
+			sourceTree = "<group>";
+		};
+		F0F46A3123DAAB5400F3FDDE /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				F0F46A2F23DAAB5000F3FDDE /* CountdownBlockModel.swift */,
+				F0F46A3223DAAC0000F3FDDE /* BlockRewardModel.swift */,
+			);
+			path = Block;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -531,9 +548,12 @@
 				F0F46A0B23D801AB00F3FDDE /* GasTracker.swift in Sources */,
 				F0F46A0823D801AB00F3FDDE /* BalanceModel.swift in Sources */,
 				F0F46A0223D801AB00F3FDDE /* GasModel.swift in Sources */,
+				F0F46A3323DAAC0000F3FDDE /* BlockRewardModel.swift in Sources */,
 				F0F46A0E23D801AB00F3FDDE /* TransactionStatus.swift in Sources */,
 				F0F46A0123D801AB00F3FDDE /* TransactionStatusModel.swift in Sources */,
 				F0F46A1723D89DA100F3FDDE /* Contract.swift in Sources */,
+				F0F46A3023DAAB5000F3FDDE /* CountdownBlockModel.swift in Sources */,
+				F0F46A2E23DAA7B700F3FDDE /* Blocks.swift in Sources */,
 				F0F46A0523D801AB00F3FDDE /* Erc20TransferModel.swift in Sources */,
 				F0F46A0723D801AB00F3FDDE /* InternalTransactionModel.swift in Sources */,
 			);
