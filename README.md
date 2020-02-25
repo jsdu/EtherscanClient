@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/EtherscanClient.svg?style=flat)](https://cocoapods.org/pods/EtherscanClient)
 [![Platform](https://img.shields.io/cocoapods/p/EtherscanClient.svg?style=flat)](https://cocoapods.org/pods/EtherscanClient)
 
-![Header](assets/Header.jpg)
+![Header](Assets/Header.jpg)
 
 ## Introduction
 
