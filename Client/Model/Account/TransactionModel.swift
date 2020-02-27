@@ -18,6 +18,7 @@ public struct TransactionModel: Codable {
     public let transactionIndex: Int?
     public let from: String
     public let to: String?
+    public let value: String
     public let gas: Int
     public let gasPrice: String
     public let isError: Bool
@@ -38,6 +39,7 @@ public struct TransactionModel: Codable {
         transactionIndex = Int(try decodedResponse.decode(String.self, forKey: .transactionIndex))!
         from = try decodedResponse.decode(String.self, forKey: .from)
         to = Utility.getString(try decodedResponse.decode(String.self, forKey: .to))
+        value = try decodedResponse.decode(String.self, forKey: .value)
         gas = Int(try decodedResponse.decode(String.self, forKey: .gas))!
         gasPrice = try decodedResponse.decode(String.self, forKey: .gasPrice)
         isError = try decodedResponse.decode(String.self, forKey: .isError) == "1" ? true : false

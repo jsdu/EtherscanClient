@@ -65,6 +65,7 @@ public enum Query: String {
     case address
     case startBlock
     case endBlock
+    case sort
     case page
     case offset
     case contractaddress
@@ -108,6 +109,11 @@ public enum Closest: String {
 public enum ClientType: String {
     case geth
     case parity
+}
+
+public enum Sort: String {
+    case asc
+    case desc
 }
 
 public enum BlockType: String {

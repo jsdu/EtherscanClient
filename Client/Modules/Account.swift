@@ -39,13 +39,14 @@ extension EtherscanClient {
     - parameter address: Address of the transactions. Default is the initial account address
     - parameter startBlock: Optional start block number
     - parameter endBlock: Optional end block number
+    - parameter sortAsc: Optional sort, defaults to ascending
     - parameter page: Optional page number. Use with offset. If set to nil, query will return up to 10000 transactions.
     - parameter offset: Optional offset. The number of transactions per page
     - parameter completion: Callback for the outcome of the fetch.
     */
     public func getTransaction(address: String? = nil, startBlock: String? = nil,
-                        endBlock: String? = nil, page: Int? = nil, offset: Int? = nil, completion: @escaping (Result<[TransactionModel], DataResponseError>) -> Void) {
-        let urlQuery = getUrlQuery(address: address, startBlock: startBlock, endBlock: endBlock, page: page, offset: offset)
+                               endBlock: String? = nil, sortAsc: Bool? = nil, page: Int? = nil, offset: Int? = nil, completion: @escaping (Result<[TransactionModel], DataResponseError>) -> Void) {
+        let urlQuery = getUrlQuery(address: address, startBlock: startBlock, endBlock: endBlock, sortAsc: sortAsc, page: page, offset: offset)
 
         fetchRemote(val: [TransactionModel].self, module: .account, action: .txlist, param: urlQuery, completion: completion)
     }
@@ -119,6 +120,7 @@ extension EtherscanClient {
                      blockType: BlockType? = nil,
                      startBlock: String? = nil,
                      endBlock: String? = nil,
+                     sortAsc: Bool? = nil,
                      page: Int? = nil,
                      offset: Int? = nil,
                      contractAddress: String? = nil) -> [URLQueryItem] {
@@ -145,6 +147,14 @@ extension EtherscanClient {
                 URLQueryItem(name: .startBlock, value: startBlock),
                 URLQueryItem(name: .endBlock, value: endBlock)
             ])
+        }
+
+        if let sortAsc = sortAsc {
+            if sortAsc {
+                param.append(URLQueryItem(name: .sort, value: Sort.asc.rawValue))
+            } else {
+                param.append(URLQueryItem(name: .sort, value: Sort.desc.rawValue))
+            }
         }
 
         if let page = page, let offset = offset {

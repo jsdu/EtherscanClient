@@ -13,6 +13,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		DD66DA02855AFF96765F52C5 /* Pods_EtherscanClient_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC772F672EE102465B4E5DB2 /* Pods_EtherscanClient_Tests.framework */; };
+		F0D5C7562408654200DE0BCC /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5C7552408654200DE0BCC /* TransactionCell.swift */; };
 		F0F46A1423D8023700F3FDDE /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A1323D8023700F3FDDE /* ApiKey.swift */; };
 		F0F46A2A23DA616A00F3FDDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A2923DA616A00F3FDDE /* ViewController.swift */; };
 		F0F46A2C23DA632600F3FDDE /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F46A2B23DA632600F3FDDE /* ResultViewController.swift */; };
@@ -46,6 +47,7 @@
 		B8ABAF1C977EA4F01FFD770C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E597BD088058146B89C090B9 /* Pods-EtherscanClient_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EtherscanClient_Tests.release.xcconfig"; path = "Target Support Files/Pods-EtherscanClient_Tests/Pods-EtherscanClient_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EDDD6FA2A76B19F98C048B72 /* Pods-EtherscanClient_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EtherscanClient_Tests.debug.xcconfig"; path = "Target Support Files/Pods-EtherscanClient_Tests/Pods-EtherscanClient_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F0D5C7552408654200DE0BCC /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		F0F46A1323D8023700F3FDDE /* ApiKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		F0F46A2923DA616A00F3FDDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F0F46A2B23DA632600F3FDDE /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				F0F46A1323D8023700F3FDDE /* ApiKey.swift */,
 				F0F46A2923DA616A00F3FDDE /* ViewController.swift */,
+				F0D5C7552408654200DE0BCC /* TransactionCell.swift */,
 				F0F46A2B23DA632600F3FDDE /* ResultViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -332,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0F46A1423D8023700F3FDDE /* ApiKey.swift in Sources */,
+				F0D5C7562408654200DE0BCC /* TransactionCell.swift in Sources */,
 				F0F46A2A23DA616A00F3FDDE /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				F0F46A2C23DA632600F3FDDE /* ResultViewController.swift in Sources */,

@@ -24,7 +24,8 @@ class ViewController: UITableViewController {
             navigationController?.navigationBar.prefersLargeTitles = true
         }
 
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "transactionCell")
+        tableView.register(TransactionCell.self, forCellReuseIdentifier: "transactionCell")
+        tableView.rowHeight = 170
         beginBatchFetch()
     }
 
@@ -47,8 +48,9 @@ class ViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "transactionCell", for: indexPath)
-        cell.textLabel?.text = "Transaction \(transactions[indexPath.row].blockHash)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "transactionCell", for: indexPath) as! TransactionCell
+        cell.transactionModel = transactions[indexPath.row]
+        cell.layoutSubviews()
         return cell
     }
 
@@ -59,7 +61,7 @@ class ViewController: UITableViewController {
     func beginBatchFetch() {
         fetchingMore = true
         print("beginBatchFetch!")
-        client.getTransaction(page: page, offset: 20) { result in
+        client.getTransaction(sortAsc: false, page: page, offset: 20) { result in
             switch result {
             case .success(let result):
                 print(result)
