@@ -10,23 +10,23 @@ import Foundation
 
 
 public struct TransactionModel: Codable {
-    let blockNumber: Int
-    let timeStamp: String
-    let hash: String
-    let nonce: Int
-    let blockHash: String
-    let transactionIndex: Int?
-    let from: String
-    let to: String?
-    let gas: Int
-    let gasPrice: String
-    let isError: Bool
-    let txreceipt_status: String?
-    let input: String?
-    let contractAddress: String?
-    let cumulativeGasUsed: String?
-    let gasUsed: Int?
-    let confirmations: Int?
+    public let blockNumber: Int
+    public let timeStamp: String
+    public let hash: String
+    public let nonce: Int
+    public let blockHash: String
+    public let transactionIndex: Int?
+    public let from: String
+    public let to: String?
+    public let gas: Int
+    public let gasPrice: String
+    public let isError: Bool
+    public let txreceipt_status: String?
+    public let input: String?
+    public let contractAddress: String?
+    public let cumulativeGasUsed: String?
+    public let gasUsed: Int?
+    public let confirmations: Int?
 
     public init(from decoder: Decoder) throws {
         let decodedResponse = try decoder.container(keyedBy: CodingKeys.self)
