@@ -9,19 +9,19 @@
 import Foundation
 
 public struct InternalTransactionModel: Codable {
-    let blockNumber: Int
-    let timeStamp: String
-    let hash: String
-    let from: String
-    let to: String?
-    let contractAddress: String?
-    let input: String?
-    let type: String
-    let gas: Int
-    let gasUsed: Int
-    let traceId: Int?
-    let isError: Bool
-    let errCode: String?
+    public let blockNumber: Int
+    public let timeStamp: String
+    public let hash: String
+    public let from: String
+    public let to: String?
+    public let contractAddress: String?
+    public let input: String?
+    public let type: String
+    public let gas: Int
+    public let gasUsed: Int
+    public let traceId: Int?
+    public let isError: Bool
+    public let errCode: String?
 
     public init(from decoder: Decoder) throws {
         let decodedResponse = try decoder.container(keyedBy: CodingKeys.self)
